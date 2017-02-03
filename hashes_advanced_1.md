@@ -1,6 +1,6 @@
 In your console (irb,pry), paste this hash:
 
-`my_hash = {dogs: [:d_one => {name: 'fido', age: 3, color: 'red'}, d_two: {name: :lassie, age: 7, color: 'golden'}], 'cats' => {'cat one' => {'name' => 'fluffy', age: 10, color: 'blue'}, cat_two: {name: 'fuzzy', age: '5', color: :pink}}`
+`my_hash = {dogs: [:d_one => {name: 'fido', age: 3, color: 'red'}, d_two: {name: :lassie, age: 7, color: 'golden'}], 'cats' => {'cat one' => {'name' => 'fluffy', age: 10, color: 'blue'}, cat_two: {name: 'fuzzy', age: '5', color: :pink}}}`
 
 1. Get the hash that :d_one is associated with (You want #=> `{name: 'fido', age: 3, color: 'red'}`)
 

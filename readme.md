@@ -57,11 +57,11 @@ USING THE CONSOLE (pry, irb, etc.):
 5. Get the second number. Continue until you get all of the numbers, one at a time (this is repetition).
 
 6. Get the first and second numbers in the array. They should be in array form (hint: use range). Output 
-   will be: [1, 2] (assuming you used 1-5).
+   will be: `[1, 2]` (assuming you used 1-5).
 
 7. Repeat for second and third, third and fourth, etc. until you get to the end.
 
-8. Get the last two numbers in the array, but with the last one first: [5, 4] (You may need to build the 
+8. Get the last two numbers in the array, but with the last one first: `[5, 4]` (You may need to build the 
    array manually).
 
 9. Add to the array using both push, <<, and unshift. Delete from the array using pop and shift. Assign 
