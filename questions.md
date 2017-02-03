@@ -4,7 +4,8 @@
    it's not technically a data type because it can't be broken down any more into different values of the
    same type. For the purpose of this question, structures are not considered types. I want raw types)
 
-2. What are the two main data structures Ruby uses to hold multiple values?
+2. What are the two main data structures Ruby uses to hold multiple values? Name three that aren't 
+   included (built in) in Ruby.
 
 3. Do values always have to be raw data types, or can structures also be values?
  
