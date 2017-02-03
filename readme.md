@@ -19,27 +19,29 @@ To turn something into a background task you need repetition. You need programmi
 #### Here is an example of a "get to know your computer" routine a beginner using a mac might want to use:
 
 RULE: CANNOT USE THE TRACKPAD DURING THIS EXERCISE (or you have to cut your finger off)
+
 1. Open terminal using command+space.
 2. Open a browser using command+space.
-3. Focus on the terminal, then the browser, using command+tab
-4. Quit the browser using command+q (make sure you are focused on it first)
+3. Focus on the terminal, then the browser, using command+tab.
+4. Quit the browser using command+q (make sure you are focused on it first).
 5. Reopen the browser.
-6. Focus on, then Quit the terminal using command+q
+6. Focus on, then Quit the terminal using command+q.
 7. Reopen the terminal and use command+t to open another tab in it.
-8. Open another tab in the browser using the same command (command+t)
-9. Open multiple tabs in both the terminal and browser, then close them one at a time using command+w
+8. Open another tab in the browser using the same command (command+t).
+9. Open multiple tabs in both the terminal and browser, then close them one at a time using command+w.
 10. Play around.
 
 #### Now an example of a basic Ruby routine
 
 USING THE CONSOLE (pry, irb, etc.):
+
 1. Make an array (don't assign it) with five integers in it (1-5 is fine, no need to get fancy).
 2. Try to now use that array (hint: you can't).
 3. Attach that same array to a local variable called a.
 4. Get the first number in the array (1 if you did 1-5)
 5. Get the second number. Continue until you get all of the numbers, one at a time (this is repetition).
 6. Get the first and second numbers in the array. They should be in array form (hint: use range). Output 
-   will be: [1,2] (assuming you used 1-5).
+   will be: [1, 2] (assuming you used 1-5).
 7. Repeat for second and third, third and fourth, etc. until you get to the end.
 8. Get the last two numbers in the array, but with the last one first: [5, 4] (You may need to build the 
    array manually).
@@ -54,6 +56,3 @@ REPEAT THIS PROCESS WITH AN ARRAY OF STRINGS, THEN SYMBOLS, THEN NILS, THEN MIX 
 
 ALTERNATE DAYS USE YOUR EDITOR TO DO THIS SAME THING, RUNNING THE FILE EACH TIME TO SEE THE RESULTS
 (hint: you may need to use puts, p, or print. Try them all).
-
-
-
