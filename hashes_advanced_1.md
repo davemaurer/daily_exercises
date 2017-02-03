@@ -6,7 +6,7 @@ In your console (irb,pry), paste this hash:
 
 2. Get the 'fido' value. #=> `"fido"`
 
-3. Get lassie the cat's age. #=> `7`
+3. Get fluffy the cat's age. #=> `10`
 
 4. Get the entire cats object. #=> `{'cat one' => {'name' => 'fluffy', age: 10, color: 'blue'}, 
    cat_two: {name: 'fuzzy', age: '5', color: :pink}}`
