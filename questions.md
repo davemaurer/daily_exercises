@@ -5,7 +5,7 @@
    same type.) For the purpose of this question, structures are not considered types. I want raw types.
 
 2. What are the two main data structures Ruby uses to hold multiple values? Name three that aren't 
-   included (built in) in Ruby.
+   included (built in) in Ruby. By included I mean that you will use in your code.
 
 3. Do values always have to be raw data types, or can structures also be values?
  
