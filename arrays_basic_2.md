@@ -43,4 +43,11 @@ IN CONSOLE:
     (maybe called arrays_basic_1.rb, or similar). Now perform some of the exercises you just did in the terminal 
     to see the differences between console code and code in a file. Notice that without puts, p, or print, you will 
     not see any feedback when you run the file. Example:
-    Inside of ak
+    
+    Inside of your file <br>
+    `things = %w(dog cat tree house car)` <br>
+    `things[-2].reverse!` <br>
+    `puts things` <br>
+    and then keep going with others. <br>
+    In the terminal/console, run your file by being in the directory where your file is and typing:
+    `Ruby thenameofmyfile` including the .rb at the end.
