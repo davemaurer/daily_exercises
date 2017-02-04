@@ -24,4 +24,45 @@
 5. Absolutely. An array that contains a million elements is still just a value itself, that can be assigned to 
    the variable `really_long_collection`.
    
-6.    
+6. Nothing. And nope. Not that I've found. A class without methods is a fancy safe with no known combination to 
+   open it. You can have all the instance variables you want in it, but you won't be able to get to them.
+   
+7. Methods can return values at any time. So yes, a class with methods only could be used, I just don't know 
+   why you'd want to, unless your use case somehow only needed multiple things returned without ever worrying 
+   about maintaining state or changing anything. 
+   
+8. a. A local variable lives as long as it's out wrapper, which is almost always a method. In the console for 
+   example, a local variable will hang out for as long as you are in your irb or pry session, because Ruby 
+   has a handy class called Main that is the default scope when there are no files, classes, or methods 
+   present. Normally, it lives as long as the method using it, then it's gone. <br>
+   b. Instance variables are saved in local memory as soon as the method they live in is called (like initialize).
+   They will live as long as the class instance is alive, and can be used be one method after another, as many 
+   times as you like. That's why they are great at maintaining and changing state inside of a class.
+   
+9. You can pass it to the other method as an argument. It's technically not extending the variable's life, 
+   because the other method fires while the method that passed the argument is still executing, but it's good 
+   to know that a local variable can be used by another method just by passing it as an argument.
+
+10. No. No it is not. And the Ruby police frown on this. Instance variables however, can be declared out 
+    in the open without being assigned a value. In that case, Ruby default's that instance variable's value 
+    to nil. 
+  
+11. A local variable or a method call. It can't be a method definition because there is no `def` in front of 
+    it. It can't be any other kind of variable because they all look different than that (@var, @@var, VAR). 
+    To find out if it's a local variable, look for it higher in the method with an assignment operator `=` to
+    the right of it. Local variables MUST be assigned before they can be used. That or it will be in the argument 
+    list for the method, meaning it was passed in (and assigned when it was passed). If neither of those are
+    present, then it absolutely must be a method call, and you can look for the method inside the class (or 
+    in a module if you happen to see one included at the top of the class).
+    
+12. You just call it. By name. Example: <br>
+```
+     def cool_method
+       "this is cool"
+     end
+     
+     def use_cool_method
+       cool_method
+     end
+```
+13. 
