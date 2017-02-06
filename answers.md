@@ -65,6 +65,31 @@
        cool_method
      end
 ```
-13. Dot notation. If you are outside the class, you must first open your "container" (the class where the 
-    method you want to use lives). So if you've already done `dog = Dog.new` and you know you have a method 
-    called name in your Dog class, you just say `dog.name`. 
+13. Dot notation. If you are outside the class, you must first open your "container"
+    (the class where the method you want to use lives). So if you've already done
+    `dog = Dog.new` and you know you have a method called name in your Dog class,
+    you just say `dog.name`. 
+
+14. A method that doesn't start with `self.`, or that isn't inside of a do 
+    block where the class inherits from self, is called an instance method 
+    because in order to use it you must instantiate the class it is defined 
+    in. Class methods are used without instantiating them first. (most
+    commonly, and probably best for clarity, these begin with `self.dot`
+    example: `def self.do_something_cool`). To see how else they can be 
+    defined [check this out](http://yehudakatz.com/2009/11/15/metaprogramming-in-ruby-its-all-about-the-self/) <br>
+    So, to call a class method, you can just do `MyClass.my_method` instead 
+    of having to do `MyClass.new.my_method`.
+    
+    To recap: Instance methods are called on an instance of a class, while 
+    class methods are just called directly on the class without instantiation.
+    
+15. Looking at answer 14 above, we would now say "it depends on whether the 
+    class has any class methods defined." A class can have both instance methods 
+    and class methods defined inside of it at the same time, but if there are no 
+    class methods defined, then the answer to the first part of the  question is yes. 
+    The second part of the question can be solved a couple different ways, but for 
+    clarity it's a good idea to use `def self.my_method` instead of inheriting, because 
+    if you end up with 50 class methods and 50 instance methods it will be hard just looking 
+    at the method itself to determine if it's an instance or class method. Putting self. in 
+    front of the method name will always tell another dev what kind of method you are 
+    defining.
