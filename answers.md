@@ -65,4 +65,6 @@
        cool_method
      end
 ```
-13. 
+13. Dot notation. If you are outside the class, you must first open your "container" (the class where the 
+    method you want to use lives). So if you've already done `dog = Dog.new` and you know you have a method 
+    called name in your Dog class, you just say `dog.name`. 
