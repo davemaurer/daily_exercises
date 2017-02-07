@@ -6,13 +6,14 @@ IN CONSOLE:
 
 3. Reverse the `"house"` element. #=> `["dog", "cat", "tree", "esuoh", "car"]` (Hint: use !)
 
-4. Remove the `"cat"` element. #=> `["dog", "tree", "esuoh", "car"]`
+4. Remove the `"cat"` element. #=> `["dog", "tree", "esuoh", "car"]` 
 
 5. Add the string `"cat"` back into the array, in the front. #=> `["cat", "dog", "tree", "esuoh", "car"]`
+   (Hint: Don't use the index. Use a built in method.)
 
 6. Make `"esuoh"` normal again.
 
-7. Add an array of elements to the end of `things` #=> `["dog", "cat", "tree", "house", "car", ["bat", "hat"]]`
+7. Add an array of elements to the end of `things` #=> `["cat", "dog", "tree", "house", "car", ["bat", "hat"]]`
 
 8. That's not what we wanted. Remove the inside array using delete, not pop.
 
