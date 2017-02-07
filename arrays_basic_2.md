@@ -20,12 +20,12 @@ IN CONSOLE:
 9. Add `"bat"` to the end of the array using the index, not push or <<. (Hint: you can set an index that doesn't 
    exist yet equal to something in an array.)
 
-10. Your array should look like this. `["dog", "cat", "tree", "house", "car", "bat"]` If it doesn't,
+10. Your array should look like this. `["cat", "dog", "tree", "house", "car", "bat"]` If it doesn't,
    don't recopy the array. Fix the wrong elements using `things[indexofmessedupelement] =`. If your array does
    look good, break it, then fix it.
 
 11. Add an array of numbers #=> `[1, 2, 3, 4, 5]` to your `things` array. #=>
-    `["dog", "cat", "tree", "house", "car", "bat", 1, 2, 3, 4, 5]`. Call `things` to make sure you added them 
+    `["cat", "dog", "tree", "house", "car", "bat", 1, 2, 3, 4, 5]`. Call `things` to make sure you added them 
     to the actual array. If you didn't, you will need assign. Do `things = yourwayofaddingthetwotogether`
 
 12. Now take the numbers out again. Using the minus operator, then using .reverse and .drop.
@@ -33,7 +33,7 @@ IN CONSOLE:
 13. Put the numbers back on and use an easier way of getting rid of the numbers: `.pop(5)`
 
 14. Add another `"dog"` element to the end of your `things` array. #=>
-    `["dog", "cat", "tree", "house", "car", "bat", "dog"]`
+    `["cat", "dog", "tree", "house", "car", "bat", "dog"]`
 
 15. Use .select to grab the "dog" elements in the array. `things.select { |e| e == "dog" }`
 
