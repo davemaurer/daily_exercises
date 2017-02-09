@@ -1,4 +1,4 @@
-In your console (irb,pry), paste this hash:
+IN YOUR CONSOLE (irb,pry), paste this hash:
 
 ```
 my_hash = {dogs: [:d_one => {name: 'fido', age: 3, color: 'red'}, d_two: {name: :lassie, age: 7, color: 'golden'}],
