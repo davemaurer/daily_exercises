@@ -45,15 +45,45 @@ something but doesn't have a relevant return value (like incrementing an instanc
 6. Shuffle `higher_nums`, select the numbers `>` 2, and sort them. Use method chaining to do it all on one line.
    How many bang operators (this thing: `!`) do you have to use if you do not reassign?
 
-7. 
+7. Using %w, make an array named `dogs` with five elements in it: "fido", "benji", "lassie", "rex", and "banjo".
+   Remember not to use commas or quotes when using %w.
+   
+8. Reassign `dogs` to `sorted_dogs`, using `.sort`. How did Ruby determine where to put banjo and benji?
+
+9. Use `.sort_by` on `dogs` to sort by the last letter in each dog's name, reassigning to `dogs_by_last_letter`.
+   You could shorten that name if you wanted. Try to make it shorter and still maintain clarity, or not.
+
+NO REASSIGNMENT NECESSARY FROM HERE. JUST REPS.
+
+10. Sort by the second letter in each name.
+ 
+11. Use `.insert` to add "Lady" at index 2.
+
+12. Use `.insert` to add "Toyota" at index -2.
+
+13. Call `dogs` to see that `.insert` mutates the array, adding without needing to reassign.
+
+14. Toyota is a car (unless the owner has a fixation). Delete "Toyota" from `dogs`.
+
+15. Use `.delete_if` to remove all of the elements that `.end_with?` the letter "o". `delete_if` takes a block.
+
+16. Use `.select` to get all of the elements that `.start_with?` the letter "r". Use `.map` and `.compact` to do 
+    the same thing.
+    
+17. Use `.map` to iterate over `dogs` and capitalize each dog's name. Do it twice, once using `.capitalize` and once 
+    using `.sub` with `.upcase`.
+    
+18. Create another array using %w, but purposely add commas: `things = %w(tree, house, car, lawn)`. Iterate and 
+    use `.sub` to take the commas out.
+    
+19. Do the same as 18 above, but use `.join` and `.split`. No `.map` needed.
+    
+19. Play around.
 
    
-   
-   
-   
 ANSWER KEY:
-3. Using ternary: `higher_nums = nums.map { |e| e > 3 ? e + 1 : e }`<br>
-   Using multiple lines: 
+For 3. Using ternary: `higher_nums = nums.map { |e| e > 3 ? e + 1 : e }`<br>
+   Using multiple lines:<br> 
 ```
    higher_nums = nums.map do |num|
      if num > 3
@@ -64,8 +94,12 @@ ANSWER KEY:
    end
 ```
 
-4. `nums_over_four = higher_nums.map { |num| num if num > 4 }.compact`
+For 4. `nums_over_four = higher_nums.map { |num| num if num > 4 }.compact`
 
-5. `nums_over_four = higher_nums.select { |num| num > 4 }`
+For 5. `nums_over_four = higher_nums.select { |num| num > 4 }`
 
-6. `higher_nums.shuffle!.select! { |num| num > 2 }.sort!` or `higher_nums = higher_nums.shuffle.select { |num| num > 2 }.sort`
+For 6. `higher_nums.shuffle!.select! { |num| num > 2 }.sort!` or `higher_nums = higher_nums.shuffle.select { |num| num > 2 }.sort`
+
+For 9. `dogs_by_last_letter = dogs.sort_by { |name| name[-1] }` 
+ 
+For 18. `things.map { |thing| thing.sub(",", """)`
