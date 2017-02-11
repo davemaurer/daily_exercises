@@ -1,5 +1,7 @@
 IN CONSOLE:
 
+NOTE: For subsequent repetitions of this set, you can start with 17 below and run through 1-16.
+
 1. Create an array with five strings in it using %w #=> `["dog", "cat", "tree", "house", "car"]`
 
 2. Attach that array to a local variable if you didn't already. `things = _`
@@ -39,6 +41,8 @@ IN CONSOLE:
 
 16. Call `things` to see if select removed the `"dogs"`. If you are new to enums, or want the practice, use 
     select on all of the other elements in the array (repetition).
+
+OPTIONAL:    
 
 17. Go to or create a directory called daily_exercises or something similar. Create a file in that directory
     (maybe called arrays_basic_1.rb, or similar). Now perform some of the exercises you just did in the terminal 
