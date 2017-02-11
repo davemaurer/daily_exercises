@@ -14,12 +14,12 @@ unique in order for the hash to return the correct value. So nil doesn't make
 a lot of sense for a key name. You could have a hash with different instantiations 
 of a class as keys if you wanted. Ex: Assuming you have a Dog class built. 
 ```
-dog_one = Dog.new('fido')
-dog_two = Dog.new('fido')
+dog_one = Dog.new("fido")
+dog_two = Dog.new("fido")
 dogs = {dog_one => dog_one.name, dog_two => dog_two.name}
-dogs[dog_one] #=> (remember that thing #=> means "would give you") 'fido'
+dogs[dog_one] #=> (remember that thing #=> means "would give you") "fido"
 ```
-As you can see. Values don't need to be unique. Just keys.
+As you can see, the values are both going to be "fido". Values don't need to be unique. Just keys.
 
 1. Use bracket notation to get the value of the `:toyota` key in your cars hash.
 
