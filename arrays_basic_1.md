@@ -1,8 +1,9 @@
 IN YOUR CONSOLE (Irb, Pry):
 
-1. Create an array with the numbers 1-5 in it. It will look like this: `[1, 2, 3, 4, 5]` 
+1. Create an array with the numbers 1-5 in it. It will look like this: `[1, 2, 3, 4, 5]`
+   Attach it to the variable `a`. (`a = [1, 2, 3, 4, 5]`)
 
-2. Use BRACKET NOTATION to get the element at the zero index: #=> `1`
+2. Use BRACKET NOTATION to get the element at the zero index: #=> `1` Ex: `a[0]`
 
 Q&A - Q: What does this mean?: #=> A: It means 'this is what you should get back' when running code.
 Example: `5 + 5` #=> `10`  
@@ -11,9 +12,14 @@ Example: `5 + 5` #=> `10`
 
 4. Reverse the array. Call the array to see that it hasn't changed. Assign the reversed array to a
    local variable, `b` ( `b = a.reverse` ). Now you have access to both normal and reversed arrays.
+   You could also use the `!` operator to mutate the value and destroy the original 
+   value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. 
 
-5. Use `.times do` to reverse the array twice. Set that to the variable `c`.
-
+5. Use `.times do` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
+   do any block of code execution multiple times. Ex: `x = 1`, then: <br>
+   `3.times { x += 1 }` would change `x` to equal 3 now. 3.times do, and 3.times {, are 
+    the same thing. `do` and `{` both stand for "do this thing" in Ruby).
+    
 6. Use the index method to get the index position of the number 3 in `a`. http://apidock.com/ruby/Array/index
 
 7. Use that index method to find the index positions of every other number, one at a time (repetition).
