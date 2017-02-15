@@ -13,14 +13,14 @@ Example: `5 + 5` #=> `10`
 4. Reverse the array. Call the array to see that it hasn't changed. Assign the reversed array to a
    local variable, `b` ( `b = a.reverse` ). Now you have access to both normal and reversed arrays.
    You could also use the `!` operator to mutate the value and destroy the original 
-   value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. 
+   value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. If you do this, reverse `a` back to #=> `[1, 2, 3, 4, 5]`
 
 5. Use `.times do` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
    do any block of code execution multiple times. Ex: `x = 1`, then: <br>
-   `3.times { x += 1 }` would change `x` to equal 3 now. 3.times do, and 3.times {, are 
-    the same thing. `do` and `{` both stand for "do this thing" in Ruby).
+   `3.times { x += 1 }` would change `x` to equal 3. 3.times do, and 3.times {, are 
+    the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom.
     
-6. Use the index method to get the index position of the number 3 in `a`. http://apidock.com/ruby/Array/index
+6. Use the index method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index)
 
 7. Use that index method to find the index positions of every other number, one at a time (repetition).
 
@@ -66,3 +66,8 @@ AFTER 3-5 repetitions: Do these exercises in a .rb file in your IDE/text editor,
 print to output the result to the screen. Run the file each time to see the result. You can keep stacking 
 up the output or you can comment out each previous exercise as you do new ones (just remember not to 
 comment out your local variables or your code won't run).
+
+
+ANSWER KEY:
+
+For 5. `3.times { a.reverse! }` 
