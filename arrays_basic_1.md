@@ -34,7 +34,9 @@ Example: `5 + 5` #=> `10`
 
 10. Make a new array with the integers 1-3 in it (`[1, 2, 3]`). Assign it to the variable `arr`.
 
-11. Subtract `arr` from `a_b`. What did you get this time?
+11. Subtract `arr` from `a_b`. What did you get this time? (Hint: The `-` operator will take out ALL matching 
+    elements, not just the first one it finds. If you have an array of `x = [3, 3, 3]` and you do: `x - [3]`, 
+    you get an empty array.)
 
 12. Check that `a_b` is still the same by calling it. Concatenation and subtraction of arrays is
     non-destructive, meaning it doesn't mutate the original objects.
