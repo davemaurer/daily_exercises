@@ -1,14 +1,14 @@
 IN YOUR CONSOLE (Irb, Pry):
 
 1. Create an array with the numbers 1-5 in it. It will look like this: `[1, 2, 3, 4, 5]`
-   Attach it to the variable `a`. (`a = [1, 2, 3, 4, 5]`)
+   Attach it to the variable `a`. (Ex: `a = [1, 2, 3, 4, 5]`)
 
 2. Use BRACKET NOTATION to get the element at the zero index: #=> `1` Ex: `a[0]`
 
 Q&A - Q: What does this mean?: #=> A: It means 'this is what you should get back' when running code.
 Example: `5 + 5` #=> `10`  
 
-3. Get the elements at each other index in the array (repetition).
+3. Get the elements at each other index in the array (repetition). Try to get index 5 (`a[5]`)
 
 4. Reverse the array. Call the array to see that it hasn't changed. Assign the reversed array to a
    local variable, `b` ( `b = a.reverse` ). Now you have access to both normal and reversed arrays.
@@ -16,17 +16,20 @@ Example: `5 + 5` #=> `10`
    value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. If you do this, reverse `a` back to #=> `[1, 2, 3, 4, 5]`
 
 5. Use `.times do` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
-   do any block of code execution multiple times. Ex: `x = 1`, then: <br>
-   `3.times { x += 1 }` would change `x` to equal 3. 3.times do, and 3.times {, are 
+   repeat any block of code execution multiple times. Ex: `x = 1`, then: <br>
+   `3.times { x += 1 }` would change `x` to equal 3. `3.times do`, and `3.times {`, are 
     the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom.
     
-6. Use the index method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index)
+6. Use the `.index` method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index) 
+   You should get `2`. IF you didn't make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
 
-7. Use that index method to find the index positions of every other number, one at a time (repetition).
+7. Use that `.index` method to find the index positions of every other number, one at a time (repetition).
 
 8. Add your `a` array and your `b` array together. Now do it again but assign it to the variable `a_b`.
+   (Hint: The `+` operator will combine two arrays into one using concatenation, which is just tacking the 
+   second thing onto the first thing.) #=> `[1, 2, 3, 4, 5, 1, 2, 3, 4, 5]`
 
-9. Subtract the `c` array from the `a_b` array (which should now be a combination of a and b). What did you
+9. Subtract the `b` array from the `a_b` array (which should now be a combination of a and b). What did you
    get, and why?
 
 10. Make a new array with the integers 1-3 in it (`[1, 2, 3]`). Assign it to the variable `arr`.
@@ -43,7 +46,7 @@ r_two = (1...5) #=> `1...5`. r.count #=> `5`. r_two.count #=> `4`. Note also tha
 when assigning a range (and in a lot of other cases). rng = 1..5 #=> `1..5`
 
 13. Use a range to get the first two elements in the `a_b` array. #=> `[1, 2]` (Hint: Use the range inside
-    of bracket notation) 
+    of bracket notation). Answer in the ANSWER KEY below if you get stuck.
 
 14. Do that again for the first three elements in the array. Note that you aren't asking for the elements 
     themselves, you are asking for the index positions.
@@ -71,3 +74,5 @@ comment out your local variables or your code won't run).
 ANSWER KEY:
 
 For 5. `3.times { a.reverse! }` 
+
+For 13. `a_b[0..1]`
