@@ -137,6 +137,53 @@ puts name
 ```
 
 Run the file. You can see that Ruby will run in a file just fine, without a class. When it does this, it 
-will run top to bottom, meaning it 
+will run top to bottom, meaning it can't retrieve any values that are stored in methods/variables, and 
+it can't run any methods, unless they are defined/assigned ABOVE where they are use. The 
+same is true inside a method, but this is NOT true inside of methods in a class, where the entire 
+object is set up for us when we instantiate it, and we can call methods above where they are 
+defined and Ruby will be able to understand. We will look at that later.
 
+8. In your dog.rb file, move the `puts name` line above the method, just to see that Ruby won't be able 
+   to do that. You can also define variables in a file just fine, but if you try to use 
+   a variable that's not defined inside a method, it needs to be an instance variable (or a CONSTANT works
+   too). Move your `puts name` back down, and above the method, assign the string "Fido" to a 
+   local variable `dog_name`. Then use `puts` to output it to the terminal/console. Your file should look
+   like this:
+   
+```
+dog_name = "Fido"
 
+def name
+  "Fido"
+end
+
+puts name
+puts dog_name
+```
+
+And you should get two Fido's when you run the file.
+
+9. Replace `"Fido"` inside of the name method with your dog_name local variable and run the 
+   file. Does Ruby understand what dog_name is inside the method? It shouldn't, because 
+   dog_name is a local variable, and local variables can't be seen if they aren't inside the 
+   "wrapper" that's trying to use them. In this case the "wrapper" is our name method, and the 
+   local variable would need to be defined inside the method in order for it to work. Change 
+   the name method so that dog_name is assigned/defined inside of it, like so:
+   
+```
+def name
+  dog_name = "Fido"
+  dog_name
+end
+
+puts name
+puts dog_name
+```
+
+Now what happens when it tries to use the `puts` method on dog_name? It's in the method "wrapper", so 
+the file "wrapper" can't see it anymore. Local variables are great for creating and transitioning 
+values temporarily. <br> 
+NOTE: Part of Ruby's implicit return (that's when Ruby gives you the last thing evaluated in a method 
+when it's called/invoked) is to return values that are assigned as the last thing in the method. This 
+means you can take out the `dog_name` line below `dog_name = "Fido"`, and the `puts name` line will 
+still work just fine. Try that out.
