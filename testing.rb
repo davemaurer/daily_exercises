@@ -1,6 +1,7 @@
 
 def name
-  "fido"
+  @name = "Fido"
 end
 
 puts name
+puts @name

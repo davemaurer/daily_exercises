@@ -186,4 +186,45 @@ values temporarily. <br>
 NOTE: Part of Ruby's implicit return (that's when Ruby gives you the last thing evaluated in a method 
 when it's called/invoked) is to return values that are assigned as the last thing in the method. This 
 means you can take out the `dog_name` line below `dog_name = "Fido"`, and the `puts name` line will 
-still work just fine. Try that out.
+still work just fine. Remove the `dog_name` line and the `puts dog_name` line, and run the file.
+
+10. Instance variables CAN be seen inside of methods, even if they aren't created inside of them. Let's 
+    see that in action. At the top of your file, assign the value `"Fido"` to the instance variable `@dog_name`.
+    Get rid of the local variable assignment inside of your `name` method. The local variable assignemt is 
+    the line that looks like this: `dog_name = "Fido"`. It's called a local variable assignment because it 
+    uses the assignment operator, `=`, to assign/attach a value to a local variable. In place of that 
+    `dog_name = "Fido"` line, we will put the line `@dog_name`. That's it. Your file should look like this:
+
+```
+@dog_name = "Fido"
+
+def name
+  @dog_name
+end
+
+puts name
+```
+
+This should give you `Fido`
+
+11. Instance variables can be seen from inside a method, and they can also be seen from outside a method. More 
+    correctly, instance variables can be seen be both the inner(the method in this case) and outer(the file)
+    wrappers. To see this, put the `@dog_name = "Fido"` line inside the `name` method, at the top. Just under 
+    the `puts name` line, add `puts @dog_name`. `@dog_name` is declared/defined/assigned inside the `name` method, 
+    but thanks to the awesomeness of instance variables, Ruby will still have access to it at the file level. 
+    Your code should look like this, and you should run the file:
+    
+```
+
+def name
+  @dog_name = "Fido"
+  @dog_name
+end
+
+puts name
+puts @dog_name
+```  
+
+And to reiterate, implicit return will handle the return of the value that's assigned to `@dog_name` without us 
+needing the line `@dog_name` inside the method. Remove that line and see that it works.
+
