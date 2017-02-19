@@ -3,6 +3,7 @@ and METHODS.
 
 A class has no purpose without methods. Even if you put a bunch of 
 instance variables inside of a class like so: 
+
 ```
 class Dog
   @name = "fido"
@@ -10,6 +11,7 @@ class Dog
   @color = "tan"
 end
 ```
+
 In the above, you would never be able to call/retrieve any of those instance variables, or 
 change them. Therefore, a class COULD have methods only, and function, but a class 
 COULD NOT do anything useful with variables only. Also, classes in Ruby are made to use 
@@ -27,6 +29,7 @@ class (NOTE: You don't have to have an initialize method to make a class work, b
 which is a built-in method in Ruby, will call initialize, setting up your instance variables in local memory).
 
 2. Make a class `Kitty`:
+
 ```
 class Kitty
   def initialize
@@ -35,6 +38,7 @@ class Kitty
   end
 end
 ```
+
 Now when you do: `kitty = Kitty.new`, you will see that your kitty variable holds an 
 object that has instance variables indicated in it. Something like this: `#<Kitty:0x007ff00c035a30 @age=7, @name="Fuzzy">`. 
 That's cool, but we still can't use those instance variables. They exist, but they serve no 
@@ -42,6 +46,7 @@ purpose because our class doesn't have any methods to use them. For fun, try to 
 kitty's name. If you succeed, how many hoops did you have to jump through?
 
 3. Make a class `Person`:
+
 ```
 class Person
   def initialize
@@ -66,7 +71,8 @@ want to create/instantiate multiple `Person` class objects with different names 
 need to either have a method(s) that changes the name and age (impractical), or we will want to 
 pass those values in when instantiating. When you do: `Person.new`, the `.new` method has the 
 ability to pass values to the `initialize` method in the class, if there is one. 
-Remake your class, typing it just as shown, even if it looks weird:
+
+4. Remake your class, typing it just as shown, even if it looks weird:
 
 ```
 class Person
@@ -94,11 +100,13 @@ it as an invisible method in the class may help conceptualize at first). The way
 it just takes off the `:`, says `def whatever_symbol_you_gave_it`, one the next line adds an `@` to the 
 symbol you gave it, then on the next line it uses `end`. This is paraphrasing the way it builds the 
 method, but that's essentially it. So when you do: `attr_reader :name`, Ruby does:
+
 ```
 def name
   @name
 end
 ```
+
 That's it. There is nothing else the attr_reader can do. It can't take special code, or add anything 
 besides `@name` inside of it, so this attr is only good for making a convenience method(or methods)
 that return(s) an instance variable named the same thing as the symbol(s) you give as arguments.
@@ -107,3 +115,28 @@ when you have 100 instance variables and 50 of them need to be returned using `.
 your file has, counting spaces, ~200 extra lines of code to go through when reading it. In 10 lines 
 or less you can use attr_reader with 50 arguments that will save you space and make your code easier 
 to traverse.
+
+5. Goto or make a practice directory (It doesn't have to be named practice). You will be making several
+   files in it.
+
+6. In your practice directory, make a file called dog.rb, using `touch` from the console. Don't use your 
+   editor to make it.
+   
+7. Open the dog.rb file in your IDE/editor, and make a method in it that returns the dog's name. No 
+   class yet, just the method. Just below the name method, call it and use puts to display it's return 
+   value in the console (using a method name while it is IN scope, in this case it's in the file
+   where the method is defined, and the method isn't wrapped in a class, so it's in scope anywhere
+   in the file after the method is defined.)
+   
+```
+def name
+  "Fido"
+end
+
+puts name
+```
+
+Run the file. You can see that Ruby will run in a file just fine, without a class. When it does this, it 
+will run top to bottom, meaning it 
+
+
