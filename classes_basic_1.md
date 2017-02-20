@@ -287,3 +287,32 @@ puts name
 This shows us that instance variables don't need to live inside of classes to work. BUT, the way Ruby is designed, 
 instance variables work best when combined with an initialize method inside of a class. That way you can carry the 
 instance variables around with you more easily and organize your code better.
+
+We've seen that Ruby can make variables and methods, and run those methods and any other code in a top-down manner 
+if we just put stuff in a file. This is fine if you are only dealing with a few methods and variables, but what 
+happens when you have 50, or 100 methods, and as many variables flying around? That's why, for your own sanity, you 
+should use Ruby's file/class/methods/variables container system to organize your code. For the most part, the system
+works in that order. Files contain classes, classes contain methods, methods contain variables. There are things like 
+constants that may float around outside of methods, and you may have code at the bottom of a file, outside a class, that 
+runs that class's methods. Also, these containers are like legos, in that a seemingly bigger piece can snap on to a 
+seemingly smaller piece. Meaning, if you wanted to, you could create an array that has 1000 class objects in it, then 
+assign that array to a local variable. Now you have a local variable that holds and array, that holds classes, that 
+each holds methods and variables... It can start to make you cross-eyed, but just remember that any Ruby object can 
+hold any other Ruby object, or objects if you are using a collection (arrays, hashes, etc.). 
+
+FOR NOW: Concentrate on files holding classes, which hold methods and variables. Data Structures, otherwise known as 
+collections (hashes, arrays, etc.) are values that hold other values. So think of them as sub-containers you can use
+inside of your class when you want to have more than one value assigned to a variable (or returned by a method). 
+
+RECAP:<br>
+a. Files hold anything that's Ruby legal (variables, classes, methods, code execution, etc.)
+
+b. Classes hold methods in a convenient wrapper/container.
+
+c. Methods hold executable code, variables, and can be used to return a value just like a variable would.
+
+d. Variables hold values. A value is ANY legal Ruby object.
+
+e. Examples of legal Ruby objects: 
+- Data Types: 
+  
