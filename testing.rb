@@ -1,7 +1,13 @@
+@name = "Fido"
 
 def name
-  @name = "Fido"
+  @name
+end
+
+def change_name(new_name)
+  @name = new_name
 end
 
 puts name
-puts @name
+change_name("Lady")
+puts name

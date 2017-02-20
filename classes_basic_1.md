@@ -215,7 +215,6 @@ This should give you `Fido`
     Your code should look like this, and you should run the file:
     
 ```
-
 def name
   @dog_name = "Fido"
   @dog_name
@@ -226,5 +225,65 @@ puts @dog_name
 ```  
 
 And to reiterate, implicit return will handle the return of the value that's assigned to `@dog_name` without us 
-needing the line `@dog_name` inside the method. Remove that line and see that it works.
+needing the line `@dog_name` inside the method. Remove that line, run the file, and see that it works.
 
+The neat thing about instance variables is that, when you instantiate a class, they are stored temporarily for
+you in your computer's local memory, and they stay in local memory until your class is finished running it's
+code/methods. This has to do with the stack and the HEAP, and technically the instance variables are stored in 
+the HEAP, but just remember that instance variables can be used to create, change, and retrieve values any time 
+during any method's execution, whereas local variables "pop" off of the stack after a method finishes running. 
+
+Why does this matter? Because now you can keep track of "state" while your class is doing stuff. If you needed a 
+counter to keep track of the number of times a certain method runs, you couldn't just make it a local variable, 
+because every time that method runs, the local variable is once again assigned, erasing any increments your 
+counter has performed. Example:
+    
+```
+def add_to_count
+  counter = 0
+  counter += 1
+end
+```
+
+Each time this method runs, it's reset to 0, then it's set to 1, and it will never actually increase over 1. BUT, 
+with an instance variable, you can change the value in one method, and another method could retrieve that value, 
+seeing it change as methods are run again and again. Example (you would want an initialize here for your instance 
+variable so I'm including it):
+
+```
+def initialize
+  @counter = 0
+end
+
+def add_to_count
+  @counter += 1
+end
+
+def check_counter
+  @counter
+end
+```
+
+12. Add an instance variable `@name` to your file at the top, and set it equal to `"Fido"`, then change your `name` 
+    method to return `@name`. Add a method `change_name` to your file that lets you change the dog's name. Finally, 
+    change the name at the bottom of the file to see that it works.
+
+```
+@name = "Fido"
+
+def name
+  @name
+end
+
+def change_name(new_name)
+  @name = new_name
+end
+
+puts name
+change_name("Lady")
+puts name
+```  
+
+This shows us that instance variables don't need to live inside of classes to work. BUT, the way Ruby is designed, 
+instance variables work best when combined with an initialize method inside of a class. That way you can carry the 
+instance variables around with you more easily and organize your code better.
