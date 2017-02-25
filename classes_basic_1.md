@@ -314,5 +314,8 @@ c. Methods hold executable code, variables, and can be used to return a value ju
 d. Variables hold values. A value is ANY legal Ruby object.
 
 e. Examples of legal Ruby objects: 
-- Data Types: 
+- Data Types: integers(5), strings("hello"), booleans(true/false), symbols(:hello), nil
+- Data Structures: hashes(`{:hello => "hello"}`), arrays(`[1, 2, 3]`), structs, linked lists, binary trees, tries, etc.
+- Class instantiations: `dog = Dog.new`
   
+
