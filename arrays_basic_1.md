@@ -5,13 +5,15 @@ IN YOUR CONSOLE (Irb, Pry):
 
 2. Use BRACKET NOTATION to get the element at the zero index: #=> `1` Ex: `a[0]`
 
-Q&A - Q: What does this mean?: #=> A: It means 'this is what you should get back' when running code.
+Q&A - Q: What does this weird `#=>` thing mean?: A: It means 'this is what you should get back' when running code.
 Example: `5 + 5` #=> `10`  
 
 3. Get the elements at each other index in the array (repetition). Try to get index 5 (`a[5]`)
 
 4. Reverse the array. Call the array to see that it hasn't changed. Assign the reversed array to a
-   local variable, `b` ( `b = a.reverse` ). Now you have access to both normal and reversed arrays.
+   local variable, `b` <br>
+   Ex: ( `b = a.reverse` ) <br> 
+   Now you have access to both normal and reversed arrays.
    You could also use the `!` operator to mutate the value and destroy the original 
    value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. If you do this, reverse `a` back to #=> `[1, 2, 3, 4, 5]`
 
@@ -75,6 +77,15 @@ comment out your local variables or your code won't run).
 
 ANSWER KEY:
 
-For 5. `3.times { a.reverse! }` 
+For 5. `3.times { b.reverse! }` 
+
+OR:
+```
+3.times do
+  b.reverse!
+end
+```
+^^ Both of the above answers do the same thing. 
+
 
 For 13. `a_b[0..1]`
