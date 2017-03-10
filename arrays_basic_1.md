@@ -17,10 +17,12 @@ Example: `5 + 5` #=> `10`
    You could also use the `!` operator to mutate the value and destroy the original 
    value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. If you do this, reverse `a` back to #=> `[1, 2, 3, 4, 5]`
 
-5. Use `.times do` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
+5. Use `.times` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
    repeat any block of code execution multiple times. Ex: `x = 1`, then: <br>
    `3.times { x += 1 }` would change `x` to equal 3. `3.times do`, and `3.times {`, are 
-    the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom.
+    the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom. <br>
+    After finishing that, use `.times` to push the letter `"a"` onto the array, then use `.times` to pop off 
+    those `"a"` elements, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
     
 6. Use the `.index` method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index) 
    You should get `2`. IF you didn't make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
@@ -32,7 +34,7 @@ Example: `5 + 5` #=> `10`
    second thing onto the first thing.) #=> `[1, 2, 3, 4, 5, 1, 2, 3, 4, 5]`
 
 9. Subtract the `b` array from the `a_b` array (which should now be a combination of a and b). What did you
-   get, and why?
+   get, and why? Answer at the bottom.
 
 10. Make a new array with the integers 1-3 in it (`[1, 2, 3]`). Assign it to the variable `arr`.
 
@@ -86,6 +88,15 @@ OR:
 end
 ```
 ^^ Both of the above answers do the same thing. 
+
+For 9. You should get an empty array, `[]`, because the subtraction operator, `-`, when used with arrays, 
+       will subtract EVERY element from the array you are taking away from, that matches something in the 
+       array you are using to do the subtracting. <br> 
+Examples: <br> 
+`a = [1, 1, 1, 1]`, `b = [1]`, `a - b` #=> `[]` <br>
+`a = ["ant", "bat", "cat"]`, `b = ["ant"]`, `a - b` #=> `["bat", "cat"]` <br>
+`a = ["ant", "bat", "cat"]`, `b = ["ant", "bat", "shark"]`, `a - b` #=> `["cat"]`. Here the `"shark"` is ignored 
+because it isn't in the `a` array.
 
 
 For 13. `a_b[0..1]`
