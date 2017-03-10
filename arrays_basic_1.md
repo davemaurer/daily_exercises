@@ -8,7 +8,10 @@ IN YOUR CONSOLE (Irb, Pry):
 Q&A - Q: What does this weird `#=>` thing mean?: A: It means 'this is what you should get back' when running code.
 Example: `5 + 5` #=> `10`  
 
-3. Get the elements at each other index in the array (repetition). Try to get index 5 (`a[5]`)
+3. Get the elements at each other index in the array (repetition). As you do this, say out loud what you will get as you 
+   access each index. This trains your brain to think about arrays like Ruby does, instead of how you think it should be .
+   The third thing in an array should, intuitively, be index 3, but it is not. It is index 2. You need repetition to get 
+   that across to your noggin. Try to get index 5 (`a[5]`)
 
 4. Reverse the array. Call the array to see that it hasn't changed. Assign the reversed array to a
    local variable, `b` <br>
@@ -21,13 +24,15 @@ Example: `5 + 5` #=> `10`
    repeat any block of code execution multiple times. Ex: `x = 1`, then: <br>
    `3.times { x += 1 }` would change `x` to equal 3. `3.times do`, and `3.times {`, are 
     the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom. <br>
-  5a. After finishing that, use `.times` to push the letter `"a"` onto the array 4 times, then use `.times` to pop off 
-      those `"a"` elements 4 times, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
+  5a. After finishing that, use `.times` to push the letter `"a"` onto the `b` array 4 times, then use `.times` to pop off 
+      those `"a"` elements from the `b` array 4 times, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
     
 6. Use the `.index` method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index) 
    You should get `2`. IF you didn't, make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
 
-7. Use that `.index` method to find the index positions of every other number, one at a time (repetition).
+7. Use that `.index` method to find the index positions of every other number, one at a time (repetition). As you do 
+   this, tell yourself what you will get as you are using the method each time. This trains your brain to see the `.index` 
+   method the way it works in Ruby, instead of the way intuitively you may think it works.
 
 8. Add your `a` array and your `b` array together. Now do it again but assign it to the variable `a_b`.
    (Hint: The `+` operator will combine two arrays into one using concatenation, which is just tacking the 
@@ -67,7 +72,7 @@ when assigning a range (and in a lot of other cases). rng = 1..5 #=> `1..5`
     your own array for this. Example: If I wanted to get the first and second elements, but didn't want to 
     use a range, I could do this: `new_arr = [a_b[0], a_b[1]]` #=> `[1, 2]`).
 
-18. Get the last, third, and second-to-last elements in your `a_b` array, in that order. #=> `[1, 3, 2]`
+18. Get the last, third, and second-to-last elements in your `a_b` array, in that order. #=> `[5, 3, 4]`
 
 ALTERNATE DAYS: Instead of numbers, use strings. Example: `["dog", "cat", "person", "house", "tree"]`
 
