@@ -21,8 +21,8 @@ Example: `5 + 5` #=> `10`
    repeat any block of code execution multiple times. Ex: `x = 1`, then: <br>
    `3.times { x += 1 }` would change `x` to equal 3. `3.times do`, and `3.times {`, are 
     the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom. <br>
-    After finishing that, use `.times` to push the letter `"a"` onto the array, then use `.times` to pop off 
-    those `"a"` elements, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
+  5a. After finishing that, use `.times` to push the letter `"a"` onto the array 4 times, then use `.times` to pop off 
+      those `"a"` elements 4 times, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
     
 6. Use the `.index` method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index) 
    You should get `2`. IF you didn't, make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
