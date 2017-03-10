@@ -25,7 +25,7 @@ Example: `5 + 5` #=> `10`
     those `"a"` elements, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
     
 6. Use the `.index` method to get the index position of the number 3 in `a`. [Info](http://apidock.com/ruby/Array/index) 
-   You should get `2`. IF you didn't make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
+   You should get `2`. IF you didn't, make sure you are doing it right, and the `a` array looks like: `[1, 2, 3, 4, 5]`
 
 7. Use that `.index` method to find the index positions of every other number, one at a time (repetition).
 
@@ -87,7 +87,11 @@ OR:
   b.reverse!
 end
 ```
-^^ Both of the above answers do the same thing. 
+^^ Both of the above answers do the same thing.
+ 
+For 6. `a.index(3)` - You are using the built-in `.index` method, often referred to as #index in documentation. The method 
+takes an argument, which is the actual value stored in the array. In this case the value is the integer `3`. What you get 
+back is the index position of that value. A more clear example: `a = ["bat", "cat"]`, `a.index("bat")` #=> `0`
 
 For 9. You should get an empty array, `[]`, because the subtraction operator, `-`, when used with arrays, 
        will subtract EVERY element from the array you are taking away from, that matches something in the 
