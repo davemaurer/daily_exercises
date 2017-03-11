@@ -1,12 +1,12 @@
 IN YOUR CONSOLE (Irb, Pry):
 
+Q&A - Q: What does this weird `#=>` thing mean?: A: It means 'this is what you should get back' when running code.
+Example: `5 + 5` #=> `10`  
+
 1. Create an array with the numbers 1-5 in it. It will look like this: `[1, 2, 3, 4, 5]`
    Attach it to the variable `a`. (Ex: `a = [1, 2, 3, 4, 5]`)
 
 2. Use BRACKET NOTATION to get the element at the zero index: #=> `1` Ex: `a[0]`
-
-Q&A - Q: What does this weird `#=>` thing mean?: A: It means 'this is what you should get back' when running code.
-Example: `5 + 5` #=> `10`  
 
 3. Get the elements at each other index in the array (repetition). As you do this, say out loud what you will get as you 
    access each index. This trains your brain to think about arrays like Ruby does, instead of how you think it should be .
@@ -50,11 +50,11 @@ Example: `5 + 5` #=> `10`
 12. Check that `a_b` is still the same by calling it. Concatenation and subtraction of arrays is
     non-destructive, meaning it doesn't mutate the original objects.
     
-You can use the Range class in Ruby to represent a consecutive sequence of numbers from x to y, where
-x is the first number and y is the number after the dots. Like so: r = (1..5) #=> `1..5`. Two dots
-means including the last number, three dots means up to but NOT including the last number. 
-r_two = (1...5) #=> `1...5`. r.count #=> `5`. r_two.count #=> `4`. Note also that parentheses are optional 
-when assigning a range (and in a lot of other cases). rng = 1..5 #=> `1..5`
+  You can use the Range class in Ruby to represent a consecutive sequence of numbers from x to y, where
+  x is the first number and y is the number after the dots. Like so: r = (1..5) #=> `1..5`. Two dots
+  means including the last number, three dots means up to but NOT including the last number. 
+  r_two = (1...5) #=> `1...5`. r.count #=> `5`. r_two.count #=> `4`. Note also that parentheses are optional 
+  when assigning a range (and in a lot of other cases). rng = 1..5 #=> `1..5`
 
 13. Use a range to get the first two elements in the `a_b` array. #=> `[1, 2]` (Hint: Use the range inside
     of bracket notation). Answer in the ANSWER KEY below if you get stuck.
