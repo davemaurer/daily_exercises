@@ -53,7 +53,7 @@ something but doesn't have a relevant return value (like incrementing an instanc
 9. Use `.sort_by` on `dogs` to sort by the last letter in each dog's name, reassigning to `dogs_by_last_letter`.
    You could shorten that name if you wanted. Try to make it shorter and still maintain clarity, or not.
 
-NO REASSIGNMENT NECESSARY FROM HERE. JUST REPS.
+  NO REASSIGNMENT NECESSARY FROM HERE. JUST REPS.
 
 10. Sort by the second letter in each name.
  

@@ -42,7 +42,7 @@ NOTE: For subsequent repetitions of this set, you can start with 17 below and ru
 16. Call `things` to see if select removed the `"dogs"`. If you are new to enums, or want the practice, use 
     select on all of the other elements in the array (repetition).
 
-OPTIONAL:    
+  OPTIONAL:    
 
 17. Go to or create a directory called daily_exercises or something similar. Create a file in that directory
     (maybe called arrays_basic_1.rb, or similar). Now perform some of the exercises you just did in the terminal 
