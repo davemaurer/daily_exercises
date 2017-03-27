@@ -212,7 +212,9 @@ This should give you `Fido`
     wrappers. To see this, put the `@dog_name = "Fido"` line inside the `name` method, at the top. Just under 
     the `puts name` line, add `puts @dog_name`. `@dog_name` is declared/defined/assigned inside the `name` method, 
     but thanks to the awesomeness of instance variables, Ruby will still have access to it at the file level. 
-    Your code should look like this, and you should run the file:
+    Your code should look like the code below, and you should run the file: (Hint: To run the file just type this: 
+    `ruby nameofmyfile.rb`) The `ruby` part essentially tells your console/terminal to find 
+    the file named and then execute it using the Ruby language.
     
 ```
 def name
@@ -317,5 +319,3 @@ e. Examples of legal Ruby objects:
 - Data Types: integers(5), strings("hello"), booleans(true/false), symbols(:hello), nil
 - Data Structures: hashes(`{:hello => "hello"}`), arrays(`[1, 2, 3]`), structs, linked lists, binary trees, tries, etc.
 - Class instantiations: `dog = Dog.new`
-  
-
