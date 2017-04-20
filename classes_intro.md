@@ -13,7 +13,7 @@ end
 ```
 
 In the above, you would never be able to call/retrieve any of those instance variables, or 
-change them. Therefore, a class COULD have methods only, and function, but a class 
+change them. Therefore, a class COULD have methods only, and still do stuff, but a class 
 COULD NOT do anything useful with variables only. Also, classes in Ruby are made to use 
 both methods and variables together so you can store values(variables), and retrieve or change 
 values(methods).
@@ -313,9 +313,7 @@ b. Classes hold methods in a convenient wrapper/container.
 
 c. Methods hold executable code, variables, and can be used to return a value just like a variable would.
 
-d. Variables hold values. A value is ANY legal Ruby object.
-
-e. Examples of legal Ruby objects: 
-- Data Types: integers(5), strings("hello"), booleans(true/false), symbols(:hello), nil
-- Data Structures: hashes(`{:hello => "hello"}`), arrays(`[1, 2, 3]`), structs, linked lists, binary trees, tries, etc.
-- Class instantiations: `dog = Dog.new`
+d. Variables hold values. A value is ANY legal Ruby object. Examples of legal Ruby objects are: 
+  - Data Types: integers(5), strings("hello"), booleans(true/false), symbols(:hello), nil
+  - Data Structures: hashes(`{:hello => "hello"}`), arrays(`[1, 2, 3]`), structs, linked lists, binary trees, tries, etc.
+  - Class instantiations: `dog = Dog.new`
