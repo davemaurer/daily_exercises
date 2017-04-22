@@ -1,8 +1,9 @@
-PREFACE: Classes are storage containers. They contain, usually, two things: VARIABLES,
-and METHODS.
+###Ruby Classes
 
-A class has no purpose without methods. Even if you put a bunch of 
-instance variables inside of a class like so: 
+Classes are storage containers. They contain, usually, two things: VARIABLES,
+and METHODS. 
+
+A class is worthless without methods. Even if you put a bunch of instance variables inside of a class like so: 
 
 ```
 class Dog
@@ -317,3 +318,41 @@ d. Variables hold values. A value is ANY legal Ruby object. Examples of legal Ru
   - Data Types: integers(5), strings("hello"), booleans(true/false), symbols(:hello), nil
   - Data Structures: hashes(`{:hello => "hello"}`), arrays(`[1, 2, 3]`), structs, linked lists, binary trees, tries, etc.
   - Class instantiations: `dog = Dog.new`
+
+###Questions and possible answers: 
+
+Q: Why does ruby even have classes?
+
+A: So you can organize your code/project/program, and to control when values are 
+   created/retrieved and changed in memory.
+   - A class just gives you an easy way to carry around some executable lines of code, 
+   along with any values those executable lines may need.
+   - When we talk about values in memory, it's important to realize that your computer 
+   doesn't just have everything in every file ready to go all the time. That would require 
+   a lot more RAM than is currently possible. Files contain hard data, meaning they are 
+   characters that are ready to be retrieved and changed and displayed whenever you want 
+   them, but they are not just waiting in the RAM. When you open a file in your computer, 
+   the data in that file is retrieved and then displayed on your screen. That's why if there is a 
+   really large file you are opening, it takes a bit longer. <br>
+   Think about it this way. The RAM on your computer may be 4, 8, 16, or 32 megabytes. The hard drive 
+   holds gigabytes. The hard drive is what can be 'written' to your computer's files, and the RAM 
+   is what can grab the stuff in the those files so you can retrieve/use/display it. Because RAM is 
+   a lot more limited than hard drive space, all programming languages use some type of management 
+   system for programs, so that only things that are needed at the time are in the RAM. The rest 
+   hangs out in files waiting for their turn to be loaded. Classes give us the ability to have things 
+   like methods and variables ready to go, and loaded into memory (RAM) as they are needed. Otherwise 
+   if you had a really big program, you might need more RAM than your computer has just to run it. If 
+   it had, say, three thousand variables and some of those variables were arrays containing data from 
+   the library of congress, good luck cramming all of that into your memory at once. 
+   - Organizationally classes keep us sane. Let's say you want a program that 
+   has three cars in it, and they race. Without classes you would need to make variables 
+   for each car, like car_one = "Car One", car_two = "Car Two", etc. Then you would need 
+   variables for each car's attributes, like car_one_color = "Red", etc. Then you would 
+   need to remember which variables go with each car, which is why you would use car_one_driver = "Fred",
+   car_two_driver = "Sarah", etc. And when you make methods/functions that use those variables, 
+   you will have to pass the values in each time, like `start_car(car_name)`. With classes you could 
+   just say `def start_car` and the method is attached to the instance of the Car class 
+   you are talking about. Like: `car_one = Car.new("Red", "Fred")`, then: `car_one.start`. Using 
+   classes in a programming language isn't wrong or right, it's just one way of organizing your code.
+   
+   
