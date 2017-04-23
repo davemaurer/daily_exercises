@@ -72,12 +72,54 @@ So if you can do x = `the thing I'm wondering about`, then you can put it into a
   
 ###PRACTICE
 
+Open your terminal/console and start up pry or irb. Either one. They both do the same thing.
+
 1. Make an array `nums = [1, 2, 3, 4, 5]`
 
 2. Get the first element in the array by using bracket notation. `nums[0]` #=> `1`
 
 3. Get the third element in the array. `nums[2]` #=> `3`
 
-4. Get the last element using the negative index. `nums[-1]` #=> 5
+4. Get the last element using the negative index. `nums[-1]` #=> `5`
 
-5. Get the element whose value is `4` using negative index. `nums[-2]` #=> 4
+5. Get the element whose value is `4` using the negative index. `nums[-2]` #=> `4`
+
+6. Use a built in Ruby method to get the number `3` out of the array. `nums.find { |num| num == 3 }`
+ - NOTE: If using the `find` method above was confusing, don't worry about it for now. You'll get plenty of practice.
+
+7. Get the first two elements out of `nums` using Ruby's `range` operator. `nums[0..2]` #=> `[1, 2]`
+  - Ruby's Range class and it's operators, `..` and `...` is covered in more detail in another arrays exercise.
+
+8. Make another array, this time with strings in it. `pets = ["dog", "cat", "ferret", "turtle"]` 
+
+9. Make the array again, but use Ruby's built in `%w` operator to make it easier to type out. `pets = %w(dog cat ferret turtle)`
+
+10. Whether an array has strings or numbers, or symbols, or whatever in it, you can use indexes to access it's elements. 
+Get the first element in `pets`. `pets[0]` #=> `"dog"` Same result as with the numbers above, we get the first element when 
+we ask for the zero index.
+
+11. Get the first element in `pets` using Ruby's built in `first` method. `pets.first` #=> `"dog"`
+  - Lots of times Ruby will give you more than one way to do something. You can get the first thing in an array using the 
+  zero index, or using the `#first` method. (You will see the pound sign `#` in front of methods a lot when they are being 
+  explained in documentation. That's just a way of not using the dot so you will know when a method is being referred to by 
+  name `#first`, and when a method is being called `.first`)
+  
+12. Get the last element using the built in `#last` method. 'pets.last' #=> `"turtle"`
+
+13. See if you can use `pets.second` or `pets.third`. You can't in Ruby. Remember you can in Rails though, as it will help 
+you out later.
+
+14. Make array with only `nil` values in it. `nothings = [nil, nil nil, nil, nil]`
+  - Be careful here if trying to use `%w`. `nil`, and `"nil"` are two different things to Ruby. One (`"nil"`) is a string, like any 
+   other string, and the other (`nil`) without quotes around it, is a representation of the absence of value.
+
+15. Use bracket notation to get the element at the zero index from your `nothings` array. `nothings[0]` #=> nil
+
+16. Make an array with all pf Ruby's five basic data types in it. `types = [1, "one", :one, true, nil]`
+  - Mixing data types inside of arrays, hashes or any other data structure is totally fine in Ruby.
+  
+17. Advanced stuff preview: Use the `find` method again, but this time find the element in the array that belongs to Ruby's 
+built in `String` class. `types.find { |element| element.is_a?(String) }` #=> `"one"`
+  - Here we just use one built in Ruby method to iterate (`find`) and one built in Ruby method to make a comparison (`is_a?`).
+  `is_a?` takes an argument, in the above case we give is `String` as an argument so it can use that to determine whether the 
+  element it's looking at is part of the `String` class or not.
