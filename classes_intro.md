@@ -355,4 +355,21 @@ A: So you can organize your code/project/program, and to control when values are
    you are talking about. Like: `car_one = Car.new("Red", "Fred")`, then: `car_one.start`. Using 
    classes in a programming language isn't wrong or right, it's just one way of organizing your code.
    
-   
+Q: Why can you make a class that has just variables in it, if that class can't do anything?
+
+A: Just because it's legal to do something in programming doesn't mean you should, or would ever 
+want to. Sometimes a thing you can do is just a by-product of the way code is written. Sometimes there 
+are reasons you don't see until you have a special niche need. Maybe you want a class to only contain 
+instance variables so you can inherit from it in another class and not clutter up your code. And remember. 
+At the end of the day all of these people who create languages are human, and don't make things 
+perfectly, or the way you think they should have been made. Sometimes you just use the tool the way it 
+was designed and let other possible ways of using it materialize later if they need to. This is a big 
+blocker for some new programmers. Needing to know why everything is everything. Learn the meat of it, 
+and let the rest sift naturally into your brain and you will be a lot happier, trust me.
+
+Q: Can I make Ruby work with no classes and no methods and no variables?
+
+A: Yes, in a different, and most would say limited way. Limited in that if you put all of your instructions
+in a file, Ruby will run each line of code procedurally from top to bottom. This is fine for very simple programs, but 
+once you have more than a few things you want to do, and more than a few values your are playing with, this way of 
+using Ruby becomes very hard to keep organized. Classes make it easier to keep track of and use data (aka, values).
