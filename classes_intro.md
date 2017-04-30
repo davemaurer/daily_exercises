@@ -1,4 +1,4 @@
-###Ruby Classes
+###Ruby Classes - Introduction
 
 Classes are storage containers. They contain, usually, two things: VARIABLES,
 and METHODS. 
