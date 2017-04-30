@@ -18,12 +18,20 @@ end
 We can see that inside the `Dog` class we have the `initialize` method that contains two 
 variables. `@name` and `@color`.
 
+It's always about values:
+
 The whole reason files, classes, methods, and variables exist in Ruby is to do stuff 
 with values. Values come in many forms, but when given to a user, they are almost always 
 a basic data type (string, integer, symbol, boolean) and usually strings and numbers(integers). 
-It helps to think about the reason code is a thing. It's a thing so we humans can get output. 
-Without values of some sort there is no output. As a developer your job is to create, store, 
-retrieve and manipulate the values we need for our output. 
+It helps to think about the reason we use programs. It's so we humans can get output. 
+Without values of some sort there is no output. As a developer, your job is to create, store, 
+retrieve and manipulate the values we need for our output. That merits repeating. Programming is 
+ALL about creating, storing, retrieving, and manipulating values.
+
+We can create values by assigning: `x = "Hello"`, or by simply outputting something for a user: `puts "Hello"`
+We store values using variables, files, databases, data structures (arrays/hashes), and local memory RAM.
+We retrieve values by running files, instantiating or calling classes, and calling variables and methods.
+
 
 So. Classes are just suped up value holders.
 

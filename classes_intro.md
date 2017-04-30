@@ -92,7 +92,9 @@ in the parens are just arguments you are passing to it. Parens are optional when
 methods, as shown in the initialize method, which now doesn't have any parens. Ruby doesn't care, it 
 only needs each argument separated by a comma, and either a space or enclosing `()` after the method 
 name. TIP: Use parens when you can, as that adds clarity and makes your code more understandable at a 
-glance.
+glance. The exception is when convention doesn't using parens, such as with `attr_reader`, or `require`. 
+Choosing to use parens in those cases will make it look weird to everyone who follows the convention, 
+which will be most people.
 
 The `attr_reader` is just a dumb method maker. When you use it, what it does is make you an "invisible" 
 method that only pops up when you instantiate a new instance of your class (what it actually does is 
