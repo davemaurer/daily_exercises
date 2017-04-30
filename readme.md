@@ -75,5 +75,6 @@ USING THE CONSOLE (pry, irb, etc.):
 
 REPEAT THIS PROCESS WITH AN ARRAY OF STRINGS, THEN SYMBOLS, THEN NILS, THEN MIX DATA TYPES
 
-ALTERNATE DAYS USE YOUR EDITOR TO DO THIS SAME THING, RUNNING THE FILE EACH TIME TO SEE THE RESULTS
-(hint: you may need to use puts, p, or print. Try them all).
+ALTERNATE DAYS MAKE A FILE AND USE YOUR TEXT EDITOR TO DO THIS SAME THING, RUNNING THE FILE EACH TIME TO
+SEE THE RESULTS (hint: you may need to use puts, p, or print to get the output to look the way you want 
+it to. Try them all).
