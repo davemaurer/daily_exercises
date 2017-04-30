@@ -62,7 +62,7 @@ USING THE CONSOLE (pry, irb, etc.):
 7. Repeat for second and third, third and fourth, etc. until you get to the end.
 
 8. Get the last two numbers in the array, but with the last one first: `[5, 4]` (You may need to build the 
-   array manually).
+   array manually). Like: `last_two = [a[-1], a[-2]]`
 
 9. Add to the array using both push, <<, and unshift. Delete from the array using pop and shift. Assign 
    action to a variable to see what happens. (i.e. z = a.shift, y = a.pop). Note what happens to the array.
