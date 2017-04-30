@@ -22,9 +22,9 @@
 8. What is the difference between a local variable and an instance variable?
 
 9. How could you "extend" the life of a local variable if you needed to use that value in another 
-   method?
+   method? Are you really extending the life of the variable, or are you simply transferring the value?
    
-10. Is a local variable without an assigned value legal in Ruby? How about an instance variable with 
+10. Is a local variable, on a line, without an assigned value, legal in Ruby? How about an instance variable with 
     no assigned value?
     
 11. When you see this: `random_thing` on a line by itself (inside of a method let's say), what are 
