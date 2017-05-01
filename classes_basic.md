@@ -50,7 +50,9 @@ from hard storage into local memory so we can output them, change them, do stuff
 
 Let's see that in action, and also clarify the idea of classes in Ruby by building code with, and without classes.
 
-Step 1: Create a file using your console/terminal.  `touch ruby-procedural.rb`
+### Procedural Ruby in a file with no classes
+
+Step 1: Create a file using your console/terminal. Like this: `touch ruby-procedural.rb`
 
 Step 2: Put some code in that file. `puts "Hello"`
 - You just stored some data. The line `puts "Hello"` is now on your hard drive inside the file `ruby-procedural.rb`,
@@ -110,3 +112,128 @@ argument into local memory, and outputs that argument to the screen with a new l
 `puts("this", "that")` in your terminal while inside irb or pry, you would get `this` on one line and `that` on another. 
 So whether you are actually defining/assigning values/methods, then using them, or you are using a method that does the 
 assignment for you, everything that executes in Ruby has to be in local memory before it can be used. 
+
+You don't need this file anymore, so you can delete it using the console/terminal. To get rid of it, in the console, type
+`rm ruby-procedural.rb`. You may be tempted to keep it. Don't. If you need it again, it will help you a lot more to go 
+through the steps of building it from scratch.
+
+### Ruby with classes. Still procedural, but some things aren't executed right away.
+
+Classes are nice because they don't have to follow the rules of top-down procedural programming where each line is executed
+in order. When you create a class in a file, all of the code inside the methods in the class is shielded from being executed,
+just like when you wrapped your `puts "Hello"` in a method earlier. This shielding of the code is known as scoping in
+programming. Scope determines how values and methods can be accessed. Up above, when you wrapped a method around the
+`puts "Hello"` line, you changed it's scope, so that the line was only available if you executed the method. It was
+scoped to the method. Every method you put inside of a class is scoped to that class. In order to get to methods
+inside the class, you have to open it up. One way to open a class is to instantiate it. You can then call methods 
+on that instantiation. Let's go through it step by step:
+ 
+Step 1: In your terminal create a file: `touch super_hero.rb`. Open that file in your editor.
+
+Step 2: Create a class inside your `super_hero.rb` file:
+
+```ruby
+class SuperHero
+  
+end
+```
+
+Step 3: Put a method in your class that just returns the hero's name. Then at the bottom, outside the `end` that closes 
+the class, try to call the `name` method.
+
+```ruby
+class SuperHero
+  def name
+    "Wonder Woman"
+  end
+end
+
+name
+```
+- Now run the file from your terminal and see if anything happens: `ruby super_hero.rb`. Ruby gives your an error here, 
+telling you `name` is an undefined variable or method. Well it's defined in the `SuperHero` class, so how come it's undefined? 
+Because of scope. The `name` method is not in scope because the `SuperHero` class container isn't opened. Let's open it.
+
+Step 4: Instantiate the `SuperHero` class by calling Ruby's built-in `new` method on it, and at the same time assign it
+to a local variable called `hero_one`. Then use the `puts` method to output the result of calling the `name` method on your 
+instantiated `SuperHero` class object.
+
+```ruby
+class SuperHero
+  def name
+    "Wonder Woman"
+  end
+end
+
+hero = SuperHero.new
+puts hero.name
+```
+
+Run the file to see that it now outputs `Wonder Woman`. 
+
+- Calling `SuperHero.new` opens the class, or more precisely, it creates a class object in your computer's local memory. 
+This class object, in this case referenced by the local variable `hero`, is then ready to have methods called on it. You 
+can also just call the method directly on `SuperHero.new` to get the same result. Add this to the bottom of the file:
+ `puts SuperHero.new.name`. The file should now look like this:
+ 
+```ruby
+class SuperHero
+  def name
+    "Wonder Woman"
+  end
+end
+
+hero = SuperHero.new
+puts hero.name
+puts SuperHero.new.name
+```
+What you actually did above was instantiate two different `SuperHero` class objects, and call 
+name on both of them, using `puts` to output the result to the terminal. Without using `.new` you 
+could not have called the name method inside of the `SuperHero` class.
+
+Inside of a method you can put any code that you would outside of a method. So you can 
+create local variables, call other methods, and even have the method call itself again (recursion).
+Lets add a method that does more than one thing.
+
+Step 5: Add a home method to the SuperHero class.
+
+```ruby
+class SuperHero
+  def name
+    "Wonder Woman"
+  end
+  
+  def home
+    "Paradise Island"
+  end
+end
+
+hero = SuperHero.new
+puts hero.name
+puts SuperHero.new.name
+```
+
+Step 6: Now add a fight_crime method that uses the other two methods we made. And 
+change the two `puts` lines at the bottom of the file.
+
+```ruby
+class SuperHero
+  def name
+    "Wonder Woman"
+  end
+  
+  def home
+    "Paradise Island"
+  end
+  
+  def fight_crime
+    name + " is fighting crime in " + home + "!!!"
+  end
+end
+
+hero = SuperHero.new
+puts hero.fight_crime
+puts SuperHero.new.fight_crime
+```
+As before, you should have two line printed to the terminal when you run this file using 
+ruby. Try it.
