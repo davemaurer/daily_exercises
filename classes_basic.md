@@ -90,4 +90,23 @@ print_hello
 ```
 What did you just do by adding that extra line of code? You called/invoked/executed a method. Specifically the method 
 you defined right above where you called it. `def print_hello` tells Ruby you want to define some code to execute. Then 
-`print_hello` calls that method. 
+`print_hello` calls that method. Because there is not class wrapping any of this code, everything is loaded into local 
+memory and executed line by line. So, if we move the line where we call our method `print_hello` up above where we define 
+it, the code won't work, because Ruby hasn't run the `def print_hello` line yet:
+
+```ruby
+print_hello
+
+def print_hello
+  puts "Hello"
+end
+```
+Run it and see an error like: ```undefined local variable or method `print_hello' for main:Object (NameError)```
+
+When running procedurally, Ruby needs everything defined (`def my_method`)or assigned (`x = "Hi there"`) before it can 
+act on those things. You may be thinking "then why does `puts "Hello"` work if `"Hello"` is not assigned before you use 
+`puts`. The simple answer is because `puts` is a built-in Ruby method that takes each argument passed to it, loads that 
+argument into local memory, and outputs that argument to the screen with a new line added. So if you did
+`puts("this", "that")` in your terminal while inside irb or pry, you would get `this` on one line and `that` on another. 
+So whether you are actually defining/assigning values/methods, then using them, or you are using a method that does the 
+assignment for you, everything that executes in Ruby has to be in local memory before it can be used. 
