@@ -58,5 +58,53 @@ why you can do something like this, and Ruby knows you aren't trying to make a h
 
 Here we use `{}` but Ruby picks up on what we are trying to do because of the CONTEXT in and around those curly braces.
 
+###Ways to make Hashes
 
+- The most basic way to make a hash is by constructing it literally.<br>
+  `shopping_list = { "tomatoes" => 3, "milk" => 1, "chocolate" => 100 }`<br>
+  NOTE: In this example there are spaces after the first curly brace and before the last brace. This is a style choice,
+  and won't affect how Ruby makes the Hash. Some prefer it spaced out for readability. It's your choice.
+
+- You can also make a hash using the BUILT IN `.new` method on Ruby's Hash class. Doing it this way lets you set a 
+  default value for every key you try to access, or create<br>
+ `shopping_list = Hash.new(0)`<br>
+ `shopping_list["tomatoes"]` #=> `0` Even though "tomatoes" aren't in our shopping list hash.
+ 
+- Bracket notation: `[]`, can be used along with the Hash class to make a hash using blocks, or just in a shorthand way.<br>
+  `shopping_list = Hash["tomatoes", 3, "milk", 1]`<br>
+  NOTE: Here Ruby sees four arguments separated by commas, so it just starts making key, value, key, value until it gets to 
+  the end of the brackets. If you try this with an odd amount of arguments inside the brackets, Ruby will give you an error.
+  Remember that in this example, even though it looks like an array, `["tomatoes", 3, "milk", 1]` is actually an arguments list 
+  being passed to the Hash class. Again, Ruby just uses the CONTEXT around the `[]` to determine what you want.
+  
+For now, focus on the first, basic way to make a hash, just using literal syntax. `my_thing = {"a" => 1, "b" => 2}`
+
+###Accessing the values in a Hash
+
+So you have a hash with stuff in it. Awesome. But now you need to get at a particular value. Let's say you want the number of 
+tomatoes that you need from your shopping list. In your terminal/console, do this:
+
+`shopping_list = { "tomatoes" => 3, "milk" => 1, "chocolate" => 100 }`
+
+To get to a value in a hash, you can:
+- Provide it's key using bracket notation: `[]`<br>
+  `shopping_list["tomatoes"]` will give you: `3`<br> 
+  What we did here is ask Ruby, what is the value for the "tomatoes" key in my `shopping_list` hash?
+  
+- We can also use the BUILT IN `.fetch` method from Ruby.<br>
+  `shopping_list.fetch("tomatoes")` gives us the same thing: `3`<br>
+  NOTE: We use parens here to give the `.fetch` method the argument it needs to go find our value for us. So here we 
+  are saying, hey Ruby, using your built-in `.fetch` method, and here is the key I want you to fetch the value for.
+  
+NOTE: Save `.fetch` for later unless you are super comfortable with this process already. You can use `[]` notation 
+to access values all day long just fine. `.fetch` is only really useful in a handful of situations that won't matter 
+often, if at all, when you are starting out.
+
+###Removing something from a Hash
+
+
+
+
+
+ 
 
