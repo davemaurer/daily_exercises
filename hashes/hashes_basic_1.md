@@ -12,12 +12,12 @@ Ruby puts the colon on the left side of the symbol when storing it.
 One thing you can't do is have two keys that are the same. They must be 
 unique in order for the hash to return the correct value. So nil doesn't make 
 a lot of sense for a key name. You could have a hash with different instantiations 
-of a class as keys if you wanted. Ex: Assuming you have a Dog class built. 
+of a class as keys if you wanted. Ex: This is assuming you have a Dog class built. 
 ```
-dog_one = Dog.new("fido")
-dog_two = Dog.new("fido")
+dog_one = Dog.new("Fido")
+dog_two = Dog.new("Rex")
 dogs = {dog_one => dog_one.name, dog_two => dog_two.name}
-dogs[dog_one] #=> (remember that thing #=> means "would give you") "fido"
+dogs[dog_one] #produces "Fido"
 ```
 As you can see, the values are both going to be "fido". Values don't need to be unique. Just keys.
 
