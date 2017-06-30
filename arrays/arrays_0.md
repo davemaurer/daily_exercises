@@ -66,6 +66,32 @@ Using Array.new: `nums = Array.new()` will give us `[]` (an empty array.)
   `nested_collections = Array.new(5, [])` gives you: `[[], [], [], [], []]`<br>
   `nested_pairs = Array.new(5, {})` giving you an array of five empty hashes.
   
+###Accessing the stuff in Arrays
+
+If you want to get to a specific element in your array: We have `nums = [1, 2, 3, 4, 5]` and we want `4`.
+- You can use the index: `nums[3]` Will give you the element at index 3. Since arrays start at index 0 and go up one 
+  for each element to the right, the number `4` is at index `3`. More on this below in the INDEXED AND ORDERED section.
+
+- You can use a BUILT IN Ruby method like `.find` or `.select`. So we can do:<br> `nums.find { |element| element == 4 }`
+
+
+###Mutating the stuff in Arrays
+- Mutating is a programmer way of saying "changing a value". If I have `x = 5`, then we use reassignment: `x = 10`, we've 
+  just "mutated" my value.
+
+- Just like in the example above, you can use reassignment to mutate something in an array. Reassignment simply means
+using the assignment operator: `=`, on something that is already defined. So, if we already have an array: `nums = [1, 2, 4, 4, 5]` 
+and we then realize there are two fours in it, and that first four should be a 3, we can just use the `=` operator to change 
+it. BUT, first we have to ACCESS it. So we do this: <br>
+`nums[2]`<br>
+to access my first `4` value in my array. Then we add on this part.<br>
+`= 3`<br>
+to reassign the value. The whole thing put together looks like this:<br>
+`nums[2] = 3`<br>
+Here we've told Ruby where to go `nums[3]`, and then told it what to do `= 3`
+
+- Ruby also has BUILT IN methods for changing things inside of arrays. `.map` being the big method on campus. More on those 
+  later.
 
 ###INDEXED AND ORDERED
 
@@ -131,7 +157,7 @@ Open your terminal/console and start up pry or irb. Either one. They both do the
 
 8. Make another array, this time with strings in it. `pets = ["dog", "cat", "ferret", "turtle"]` 
 
-9. Make the array again, but use Ruby's built in `%w` operator to make it easier to type out. `pets = %w(dog cat ferret turtle)`
+9. Remake that same array, but use Ruby's built in `%w` operator to make it easier to type out. `pets = %w(dog cat ferret turtle)`
 
 10. Whether an array has strings or numbers, or symbols, or whatever in it, you can use indexes to access it's elements. 
 Get the first element in `pets`. `pets[0]` #=> `"dog"` Same result as with the numbers above, we get the first element when 
