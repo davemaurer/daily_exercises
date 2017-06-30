@@ -40,8 +40,8 @@ cats_and_dogs = [dog_one, cat_one, cat_two]
 ###Making Arrays
 There are several ways to make an Array in Ruby. These are built in for you, and you just need to follow the convention.
 
-Creating a literal object: `nums = [1, 2, 3, 4, 5]` will give you an array with 1 through 5 in it. 
-- We say "literal" object because we use the actual style it will be displayed as to make it (brackets with stuff in it.)
+Using "literal" syntax: `nums = [1, 2, 3, 4, 5]` will give you an array with 1 through 5 in it. 
+- We say "literal" because we use the actual form it will be displayed as to make it (brackets with stuff in it.)
   You could also just make an empty array if you wanted: `my_collection = []`
 
 Calling the to_a method: `nums = (1..5).to_a` will return the same result as above. 
@@ -49,6 +49,13 @@ Calling the to_a method: `nums = (1..5).to_a` will return the same result as abo
   to the local variable nums. Giving us `[1, 2, 3, 4, 5]`. You can call .to_a on other things (like hashes) to get 
   different results. The docs can give you more info, but for now knowing a range can be turned into an array quickly 
   is handy.
+  
+Using a percent literal when you want a group of single word strings: `words = %w(dog cat tree house)` will give you:
+`["dog", "cat", "tree", "house"]`
+- The percent literal is  just a phrase coined to mean using the `%` sign followed by a letter (w here) to tell Ruby 
+  to execute some BUILT IN stuff. `%w %r %i %s %x` are all ways of using the percent literal, but concern yourself with 
+  the word array making one right now. That's `%w`
+  NOTE: `%w(dog cat)` and `%w[dog, cat]` will do the same thing. Just a style choice here between parens or brackets.
 
 Using Array.new: `nums = Array.new()` will give us `[]` (an empty array.)
 - Array is just a class in Ruby, and can be instantiated just like other classes you make. And like other classes you
