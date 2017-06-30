@@ -235,5 +235,5 @@ hero = SuperHero.new
 puts hero.fight_crime
 puts SuperHero.new.fight_crime
 ```
-As before, you should have two line printed to the terminal when you run this file using 
+As before, you should have two lines printed to the terminal when you run this file using 
 ruby. Try it.
