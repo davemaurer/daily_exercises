@@ -27,7 +27,36 @@
 
   `employees = { :bob => [[:address, "123 bob street"], [:phone, "555-333-1111"]] }`
 
-OK that's enough high level "hash-like thinking" for now. More of this will follow. Let's dive down closer and look at the 
+OK that's enough high level "hash-like thinking" for now. More of this will follow. Let's dive down closer and look at 
 what makes Hashes tick.
+
+###The curly braces: {}
+
+Ruby uses {} hold all of the key/value pairs in a hash, and these can be nested just like you can nest parens in math, or 
+brackets with arrays, as we did in our employee example above.
+
+This can be confusing because Ruby also uses {} to indicate `do` an `end`, such as in a block:<br>
+`nums.map { |num| puts num }`
+
+What tells Ruby how to handle things is the CONTEXT in which you use the {}. If Ruby sees just a starting `{`, 
+followed by legal syntax for key/value pairs, then a closing `}`, it knows you are making a hash.
+
+Open up your console/terminal and enter irb or pry or whatever you use for an interactive Ruby playground. Then type.<br>
+`{:key_one => "value_one", :key_two => "value_two"}`
+
+You should see that Ruby gives you a hash back. You can assign it to a variable also, so you an use it later.<br>
+`my_pairs = {:key_one => "value_one", :key_two => "value_two"}`
+
+Now try to make a hash, but don't use legal syntax, like:<br>
+`bad_pairs = {"one", "two", "three"}`
+
+Ruby should tell you no, by way of an error.
+
+So the way Ruby determines how to use the `{}` you type, is by looking at what is around them, and what is in them. That's 
+why you can do something like this, and Ruby knows you aren't trying to make a hash.<br>
+`[1, 2, 3].map { |num| num + 1 }`
+
+Here we use `{}` but Ruby picks up on what we are trying to do because of the CONTEXT in and around those curly braces.
+
 
 
