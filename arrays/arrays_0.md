@@ -26,7 +26,39 @@
     output sentences, words, calculations, whatever.
 
 The key to remembering what can be stored in an array is to ask yourself, can this be stored by a variable? 
-So if you can do x = `the thing I'm wondering about`, then you can put it into an array.
+So if you can do x = `the thing I'm wondering about`, then you can put it into an array. This means you can 
+have arrays hold other arrays: `[[1,2], [3,4], ["cat", "dog"]]`, or arrays can hold hashes: `[{:dog => "awesome", 
+:cat => 0}, {"one" => 1, "two" => 2}]`, or arrays can even hold class instances:
+```ruby
+dog_one = Dog.new # this assumes you've already made a Dog class
+cat_one = Cat.new # same as above
+cat_two = Cat.new # a different instance of cat from cat_one. Ruby now has TWO different 
+                  # cat objects stored in memory for you.
+cats_and_dogs = [dog_one, cat_one, cat_two]
+```
+
+###Making Arrays
+There are several ways to make an Array in Ruby. These are built in for you, and you just need to follow the convention.
+
+Creating a literal object: `nums = [1, 2, 3, 4, 5]` will give you an array with 1 through 5 in it. 
+- We say "literal" object because we use the actual style it will be displayed as to make it (brackets with stuff in it.)
+  You could also just make an empty array if you wanted: `my_collection = []`
+
+Calling the to_a method: `nums = (1..5).to_a` will return the same result as above. 
+- Here we call .to_a on a range, which takes each thing in the range and adds it to an array, which is assigned 
+  to the local variable nums. Giving us `[1, 2, 3, 4, 5]`. You can call .to_a on other things (like hashes) to get 
+  different results. The docs can give you more info, but for now knowing a range can be turned into an array quickly 
+  is handy.
+
+Using Array.new: `nums = Array.new()` will give us `[]` (an empty array.)
+- Array is just a class in Ruby, and can be instantiated just like other classes you make. And like other classes you
+  can make, Array has an initialize that takes arguments and does something with them. Read the docs for more details, but 
+  for now just remember that `Array.new(1,2,3,4,5)` will not act like you might think. A common way `Array.new` could 
+  be used is for making an array of n objects. n being the number of objects you want. Example:
+  
+  `nested_collections = Array.new(5, [])` gives you: `[[], [], [], [], []]`<br>
+  `nested_pairs = Array.new(5, {})` giving you an array of five empty hashes.
+  
 
 ###INDEXED AND ORDERED
 
