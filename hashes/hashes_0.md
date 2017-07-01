@@ -100,7 +100,38 @@ NOTE: Save `.fetch` for later unless you are super comfortable with this process
 to access values all day long just fine. `.fetch` is only really useful in a handful of situations that won't matter 
 often, if at all, when you are starting out.
 
+###Adding keys and changing values in a Hash
+
+- If we have our shopping list, and now we want to add spinach to it, to offset all of the chocolate we are going to buy, 
+  we can use the assignment operator: `=`, to add a new key to our hash. Like so:
+
+  `shopping_list = { "tomatoes" => 3, "milk" => 1, "chocolate" => 100 }`<br>
+  `shopping_list["spinach"] = 100`<br>
+  When we do this, if we don't have a "spinach" key in our hash (and we didn't yet), Ruby will add that key to the hash, and 
+  set that key's value to whatever we put after the `=` operator. In this case, Ruby adds `"spinach" => 100"` to the end of 
+  our hash, so now it looks like this if you call it in the console:<br>
+  `shopping_list`<br>
+  And Ruby returns for you: `{"tomatoes"=>3, "milk"=>1, "chocolate"=>100, "spinach"=>100}`
+  
+- But what if we just want to change a value in our shopping_list, like we know we will eat all of the chocolate and 
+  maybe go into a sugar coma. So we now only want our "chocolate" key to have a value of 5. Well, the `=` operator is 
+  still exactly what you want. Just like you can use `=` to assign something to variable, then use it again to REASSIGN, 
+  you can do that with a hash. So use your existing `shopping_list` in your terminal, or just make it again, then:<br>
+  `shopping_list["chocolate"] = 5`<br>
+  What happens here is if a key already exists inside of a Hash object, Ruby REASSIGNS that key's value. This is because 
+  you can't have more than one key with the same name at any level of a hash object. So Ruby has code under the hood that 
+  accounts for this situation, and instead of yelling at you that the key already exists, it says "ah, I think this programmer 
+  wants me to change the value associated with this key", and viola. Changed.
+  
+- You can also use the BUILT IN `.store` method, which will take in the key and value as arguments. Like this:<br>
+  `shopping_list.store("bananas", 5)`<br>
+  `.store` can be used to both add a key/value pair to hash, or change as existing key's value to a new value, just like 
+  bracket notation: `[]`, and the assignment operator: `=`, can.
+
 ###Removing something from a Hash
+
+If you want to keep a key in a hash, but not have it point to a usable value, you could always set that value to nil.
+
 
 
 
