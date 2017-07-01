@@ -115,15 +115,16 @@ often, if at all, when you are starting out.
   
 - But what if we just want to change a value in our shopping_list, like we know we will eat all of the chocolate and 
   maybe go into a sugar coma. So we now only want our "chocolate" key to have a value of 5. Well, the `=` operator is 
-  still exactly what you want. Just like you can use `=` to assign something to variable, then use it again to REASSIGN, 
-  you can do that with a hash. So use your existing `shopping_list` in your terminal, or just make it again, then:<br>
+  still exactly what you want. Just like you can use `=` to assign something to variable (`x = 5`), then use it again
+  to REASSIGN (`x = 10`), you can do that same thing with a hash. So use your existing `shopping_list` in 
+  your terminal, or just make it again, then:<br>
   `shopping_list["chocolate"] = 5`<br>
   What happens here is if a key already exists inside of a Hash object, Ruby REASSIGNS that key's value. This is because 
   you can't have more than one key with the same name at any level of a hash object. So Ruby has code under the hood that 
   accounts for this situation, and instead of yelling at you that the key already exists, it says "ah, I think this programmer 
   wants me to change the value associated with this key", and viola. Changed.
   
-- You can also use the BUILT IN `.store` method, which will take in the key and value as arguments. Like this:<br>
+- You can also use Ruby's BUILT IN `.store` method, which will take in the key and value as arguments. Like this:<br>
   `shopping_list.store("bananas", 5)`<br>
   `.store` can be used to both add a key/value pair to hash, or change as existing key's value to a new value, just like 
   bracket notation: `[]`, and the assignment operator: `=`, can.
@@ -132,10 +133,35 @@ often, if at all, when you are starting out.
 
 If you want to keep a key in a hash, but not have it point to a usable value, you could always set that value to nil.
 
+- `shopping_list = { "tomatoes" => 3, "milk" => 1, "chocolate" => 100 }`<br>
+  `shopping_list["tomatoes"] = nil`
+  
+But if you want to REMOVE a key/value pair altogether from a hash, Ruby has a BUILT IN method called `.delete` that 
+works on a lot of different things, hashes being one of those things. Let's check it out. In your terminal:
 
+- `shopping_list.delete("tomatoes")`<br>
+  As we can see if we then call our shopping list (do that now), the key of "tomatoes" is gone, along with its value. So 
+  the `.delete` method just needs to be given an argument, which is the key you want to remove. When specifying this key, remember you 
+  need to give Ruby the exact data type that the key is. So doing: `shopping_list.delete(tomatoes)` (no quotes around the 
+  word tomatoes this time) will give you an error, because Ruby doesn't know what tomatoes is, unless you happen to assign 
+  something to a local variable named `tomatoes`. But Ruby does know what `"tomatoes"` is, because when you created that key 
+  you made it a string.
 
+###Changing the name of a key in a Hash
 
+There are a couple of ways to do this by iterating over your hash and just returning a new hash with the key (or keys) 
+you want changed, but there is also a kind of simple way to do this if you just have, say one key you named wrong. In your 
+terminal:
 
-
- 
-
+- `typo_list = { "sugar" => 3, "beets" => 1, "brockalie" => 100 }`<br>
+  Uhoh, that's not the way you spell broccoli! Red alert, we need to fix this stat! We could just delete the bad key, then 
+  add a new key spelled correctly, but because of what Ruby actually RETURNS for you when you call delete, you can kill two 
+  birds with one stone. Ruby returns you the VALUE of the key you deleted when you use the `.delete` method. This is 
+  programmed under the hood so don't think too much about why right now. Just know that that's the way `.delete` works. So 
+  if that's true, and (DON'T DO THIS, IT'S JUST AN EXAMPLE): `typo_list.delete("brockalie")` would give us back the number 
+  `100`, can't we just do this? (yes, we can): OK NOW do this in your terminal:<br>
+  `typo_list["broccoli"] = typo_list.delete("brockalie")`<br>
+  If that makes you cross-eyed don't worry too much about it right now. Things gain more clarity the more you are exposed 
+  to them. Basically it boils down to methods being able to both DO a thing, and RETURN a thing, and what a method returns 
+  does not have to represent exactly what it does. So `.delete` when used on a hash removes the key you tell it to remove, 
+  then returns you the value of the key it just took out for you. Hence, being able to do what we did up there.
