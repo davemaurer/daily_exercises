@@ -64,6 +64,9 @@ Here we use `{}` but Ruby picks up on what we are trying to do because of the CO
   `shopping_list = { "tomatoes" => 3, "milk" => 1, "chocolate" => 100 }`<br>
   NOTE: In this example there are spaces after the first curly brace and before the last brace. This is a style choice,
   and won't affect how Ruby makes the Hash. Some prefer it spaced out for readability. It's your choice.
+  As far as how it's formatted, when you tell Ruby to make you a hash this way, you need a comma between each key/value 
+  pair, and you can use a hashrocket: `=>`, to tell Ruby what the key, and the value are respectively. (there is another way 
+  to do this, but that will be covered later. hashrockets ALWAYS work so use that way for now.)
 
 - You can also make a hash using the BUILT IN `.new` method on Ruby's Hash class. Doing it this way lets you set a 
   default value for every key you try to access, or create<br>
@@ -153,15 +156,37 @@ There are a couple of ways to do this by iterating over your hash and just retur
 you want changed, but there is also a kind of simple way to do this if you just have, say one key you named wrong. In your 
 terminal:
 
-- `typo_list = { "sugar" => 3, "beets" => 1, "brockalie" => 100 }`<br>
-  Uhoh, that's not the way you spell broccoli! Red alert, we need to fix this stat! We could just delete the bad key, then 
-  add a new key spelled correctly, but because of what Ruby actually RETURNS for you when you call delete, you can kill two 
-  birds with one stone. Ruby returns you the VALUE of the key you deleted when you use the `.delete` method. This is 
-  programmed under the hood so don't think too much about why right now. Just know that that's the way `.delete` works. So 
-  if that's true, and (DON'T DO THIS, IT'S JUST AN EXAMPLE): `typo_list.delete("brockalie")` would give us back the number 
-  `100`, can't we just do this? (yes, we can): OK NOW do this in your terminal:<br>
-  `typo_list["broccoli"] = typo_list.delete("brockalie")`<br>
+- `typo_list = { "sugar" => 3, "beets" => 1, "brockalie" => 100 }`
+
+  Uhoh, that's not the way you spell broccoli! Red alert, we need to fix this stat! We could just delete the bad key in 
+  one step, then in another step add a new key spelled correctly, but because of what Ruby actually RETURNS for you when
+  you call delete, you can kill two birds with one stone. Ruby returns you the VALUE of the key you deleted when you use 
+  the `.delete` method. This is programmed under the hood so don't think too much about why right now. Just know that 
+  that's the way `.delete` works. So if that's true, and (DON'T DO THIS, IT'S JUST AN EXAMPLE): `typo_list.delete("brockalie")`
+  would give us back the number `100`, can't we just do this? (yes, we can): OK NOW do this in your terminal:
+  
+  `typo_list["broccoli"] = typo_list.delete("brockalie")`
+  
   If that makes you cross-eyed don't worry too much about it right now. Things gain more clarity the more you are exposed 
-  to them. Basically it boils down to methods being able to both DO a thing, and RETURN a thing, and what a method returns 
+  to them. Basically it boils down to methods being able to both DO something, and then RETURN a thing, and what a method returns 
   does not have to represent exactly what it does. So `.delete` when used on a hash removes the key you tell it to remove, 
   then returns you the value of the key it just took out for you. Hence, being able to do what we did up there.
+
+### RECAP or TL/DR
+
+- Hashes data structures that are made up of key/value pairs, and they can be nested inside of each other.
+ 
+- To make a basic hash, use the curly braces: `{}` and put what you want your keys/values to be inside of the braces. Remember 
+  to use hashrockets and commas to tell Ruby what parts go where.
+
+- Use bracket notation: `[]` to retrieve a value from a hash. Do this by putting the key's literal name inside of the brackets: 
+  `my_h["my_key"]`
+  
+- Also use brackets to add a key and value, or change the value of a key that already exists in a hash. To do this 
+  you add the assignment operator: `=` after the brackets: `my_h["new_key"] = 5`
+  
+- To delete a key from a hash, use Ruby's BUILT IN `.delete` method. This method expects you to give it an argument. The 
+  argument will be the literal name of the key you want to remove from the hash: `my_h.delete("new_key")`.
+  
+- To change the name of a key in a hash, make clever use of the return value you get back from using `.delete`: 
+  `my_h["renamed_key"] = my_h.delete("old_key")`.
