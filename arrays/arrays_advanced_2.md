@@ -16,7 +16,7 @@ nums.map.with_index { |num, idx| num + idx }
 One way to use the index inside the block is to refer to another collection, at THAT index. Because each time the 
 block iterates, the index is automatically incremented by one, it's easy to "traverse" the other collection.
 
-1. Make and array of numbers 1 through 10 by using a Range object. Assign it to a variable `nums`.
+1. Make an array of numbers 1 through 10 by using a Range object. Assign it to a variable `nums`.
 
 - `nums #=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
 

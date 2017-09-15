@@ -1,5 +1,17 @@
 ### Daily exercise routine, AKA, do your push ups!!
 
+Suggested progression:
+classes_0
+classes_1
+questions-and-answers
+arrays_0
+arrays_basic_1
+arrays_basic_2
+hashes_0
+hashes_basic_1
+hashes
+classes_0 and 1 if still fuzzy
+
 Many cognitive scientists agree that we all have a "mental bucket" that drains throughout the day
 for various reasons, including having to make decisions. The harder the decision, the more willpower 
 we need to use (more drains out of the bucket). Thus, concentrating really hard on making an array of
