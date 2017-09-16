@@ -58,7 +58,7 @@ As you can see, the values are both going to be "fido". Values don't need to be 
    is `"lightsaber"` from your `my_hash` hash. Like this: `my_hash.delete("lightsaber")`. Now check your 
    `my_hash` hash to see that it's empty.
    
-9. Add a key/value pair (`:chevy`/`"volt!!!"`) to your `cars` hash.
+9. Add a key, `:chevy` that points to a value, `"volt!!!"` in your `cars` hash.
 
 10. Change the value of the `"ford"` key to `"escape"` in `cars`.
 
@@ -71,7 +71,7 @@ As you can see, the values are both going to be "fido". Values don't need to be 
     can be anything you can assign to a variable. Since you can assign an array to a variable, you can make 
     an array a hash key, or a hash value.
     
-13. This is a cars array. Use `.delete` to remove the `[1, 2, 3]` key along with it's value.
+13. This is a cars array. Numbers have no place here. Use `.delete` to remove the `[1, 2, 3]` key along with it's value.
  
  
 14. Build a few hashes from scratch, using both this style with the shorthand symbols: `h = {a: "b", c: "d"}`
