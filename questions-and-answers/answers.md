@@ -93,3 +93,9 @@
     at the method itself to determine if it's an instance or class method. Putting self. in 
     front of the method name will always tell another dev what kind of method you are 
     defining.
+    
+16. One, and only one, ever. That value can in turn store multiple values, which can store values, which...etc. But 
+    when looking at something that a variable points to: `x = "mystring"`, or `x = Cat.new`, that thing is always only one 
+    value. Take, for instance, an array: `arr = [1, 2, 3, 4, 5]`. At first glance it's easy to think that the variable `arr` 
+    points to multiple values. But what is really points to is a single data structure. An array. That array contains multiple 
+    values, but the array itself is only one value. Same for hashes, structs, and classes.

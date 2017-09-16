@@ -41,3 +41,5 @@
     
 15. Do you have to instantiate a class in order to be able to call methods on it? How could you call a 
     method on a class that hasn't been instantiated? (Hint: self)
+    
+16. How many values can one variable store?
