@@ -76,11 +76,12 @@ ANSWERS:
 
     ```
     This is useful when you have a hash you want to add numeric values to, but want it to give you 
-    0 if you ask for a key that isn't in the hash. Like so: 
+    0 if you ask for a key that isn't in the hash. Like so: (Actually try this in your console)
     ```ruby
     weapons = Hash.new(0)
 
-    weapons['water balloons'] += 1 # += would not work if the default value wasn't 0. If it's nil, you can't += it.
+    weapons['water balloons'] += 1 # += would not work if the default value wasn't 0. If it's nil, you can't += it. Call weapons 
+    # to see that your hash has changed. Try making a hash without the (0) part, just Hash.new, and see if you can use +=.
 
     weapons['death-ray'] #=> 0. If the default were not 0, you would get nil for this when asking how many death rays you have. So
     # if you wanted to dominate the world only if you had > 5 death rays, you couldn't write a conditional that would trigger your 
