@@ -69,7 +69,9 @@ ANSWERS:
     key you try to access in the hash, regardless of whether it exists in the hash or not.
     ```ruby
     h = Hash.new("wut")
+
     h["nonexistant key"] #=> "wut"
+
     h["another key not in there"] #=> "wut"
 
     ```
@@ -77,7 +79,9 @@ ANSWERS:
     0 if you ask for a key that isn't in the hash. Like so: 
     ```ruby
     weapons = Hash.new(0)
+
     weapons['water balloons'] += 1 # += would not work if the default value wasn't 0. If it's nil, you can't += it.
+
     weapons['death-ray'] #=> 0. If the default were not 0, you would get nil for this when asking how many death rays you have. So
     # if you wanted to dominate the world only if you had > 5 death rays, you couldn't write a conditional that would trigger your 
     # world domination. Because if the default were nil, which it is if you don't give a default as an argument using Hash.new, 
