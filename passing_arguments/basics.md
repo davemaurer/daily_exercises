@@ -10,18 +10,45 @@ arguments are just another way to say values. In short, an argument is a paramet
 #### Argument list:
 
 A way to say "the arguments that are expected when a method is supposed to take arguments". Example: Below, the three 
-things inside the parens, (arg_one, arg_two, arg_three), is the argument list. It's the list of arguments a method takes.
-
-#### Called, invoked, executed:
-
-When talking about methods, all of these words mean the same thing. Running the method. When you call a method, invoke 
-a method, or execute a method, you are just picking between three ways to say running the code inside the method.
+things inside the parens, (arg_one, arg_two, arg_three), is/are the argument list. It's the list of arguments a method takes.
 
 ```ruby
 def my_cool_method(arg_one, arg_two, arg_three)
   #cool code
 end
 ```
+
+#### Called, invoked, executed:
+
+When talking about methods, all of these words mean the same thing. Running the method. When you call a method, invoke 
+a method, or execute a method, you are just picking between three ways to say running the code inside the method.
+
+#### Pass, accept, catch, receive
+
+When you hear/see pass or passed in, it's referring to when an actual value is given during a method call/invocation/execution. 
+When you hear accept, catch, receive, it's when the value that was PASSED is CAUGHT by the local variable name you decided on 
+in the argument list. Example:
+
+```ruby
+def print_three_words(word_one, word_two, word_three)
+  puts word_one + ' ' + word_two + ' ' + word_three
+end
+
+print_three_words("this", "that", "wut")
+```
+Above we first define our method `def print...`, then we call/invoke our method `print_three_words("this", "that", "wut")`. The 
+method call passes three values to the method definition, where they are caught and now those three argument names, word_one, word_two, 
+and word_three, equal the three values. So that inside the method:
+
+```ruby
+word_one = "this"
+word_two = "that"
+word_three = "wut'
+```
+Remember that when it's passed it has to be an actual value, and when it's caught/received, the value is attached to the name you gave it 
+in your argument list.
+
+### Why even bother passing arguments?
 
 In almost every programming language, values need to be shared, or passed, between pieces of code in order to stay 
 organized and not clutter up files with repeated stuff. If you had to make x = a very long hash 15 different times in 
@@ -97,8 +124,43 @@ t = Talk.new # instantiate the Talk class. This makes it a class object in memor
 t.say_something("hello") # call the say_something method on your instantiated Talk object.
 ```
 Above, because there is no `def` in front of say_something, we know we need to give an actual value, like the string of "hello".
-Further up when we created our say_something method: `def say_something(phrase)`, we see a `def` in front of the method, so 
-we know the argument can't be an actual value, but instead should look like a local variable: `phrase`.
+Further up, when we created our say_something method: `def say_something(phrase)`, we see a `def` in front of the method, so 
+we know the argument can't be an actual value, but instead we name it like a local variable: `phrase`.
 
-### Looking at it like Ruby sees it
+### Can I pass arguments in any order I want? Will Ruby jsut figure it out for me?
 
+Nope. Arguments are meant to be given one at a time in sequential order. So if you have a method that takes three arguments, 
+and all of those arguments are supposed to be different data types, you need to give them in the right order. Example: You have 
+a method that takes two numbers, adds them, and outputs the added result followed by a word of your choice.
+
+```ruby
+def two_numbers_and_a_word(num_one, num_two, word)
+  result = num_one + num_two
+  puts "#{result} is your " + word
+end
+```
+You can then call the method, providing two numbers as the first two arguments, and a string as the last argument. This will work.
+
+`two_numbers_and_a_word(5, 3, "awesomeness!")`
+
+But if you try to provide the string first, and the two numbers second, Ruby will pass in the second number as the last argument. 
+Now you have a TypeError, because you have that `+` operator trying to add `word` to the string you made. Just like you can't triple 
+stamp a double stamp(movie reference), you can't add a string to an integer. So the following example would fail:
+
+`two_numbers_and_a_word("awesomeness!", 5, 3)`
+
+Order matters when passing arguments.
+
+
+### Summing it up
+
+When calling a method that expects arguments, pass an actual value: 
+
+`say_word("hello")`
+
+When defining a method that takes arguments, name your arguments like local variables: 
+
+`def say_word(word)`
+
+Arguments are passed in order, so if your first argument should be a string, and your second should be an integer, 
+that's how you will need to give them to your method when you call it.
