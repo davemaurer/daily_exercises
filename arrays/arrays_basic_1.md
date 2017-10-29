@@ -23,7 +23,9 @@ Example: `5 + 5` #=> `10`
 5. Use `.times` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
    repeat any block of code execution multiple times. Ex: `x = 1`, then: <br>
    `3.times { x += 1 }` would change `x` to equal 3. `3.times do`, and `3.times {`, are 
-    the same thing. `do` and `{` both stand for "do this thing" in Ruby). Answer at the bottom. <br>
+    the same thing. `do` and `{` both stand for "do this thing" in Ruby). Call your b array again to see that it was changed. 
+    Note that the return value you got from using `.times` is not the `b` array. It's the number of times the `.times` method 
+    iterated. Answer at the bottom. <br>
   5a. After finishing that, use `.times` to push the letter `"a"` onto the `b` array 4 times, then use `.times` to pop off 
       those `"a"` elements from the `b` array 4 times, to end up with your `b` array looking like this again: `[1, 2, 3, 4, 5]`
     
@@ -72,7 +74,8 @@ Example: `5 + 5` #=> `10`
     your own array for this. Example: If I wanted to get the first and second elements, but didn't want to 
     use a range, I could do this: `new_arr = [a_b[0], a_b[1]]` #=> `[1, 2]`).
 
-18. Get the last, third, and second-to-last elements in your `a_b` array, in that order. #=> `[5, 3, 4]`
+18. Get the last, third, and second-to-last elements in your `a_b` array, in that order. #=> `[5, 3, 4]`. (Hint: 
+    refer to the "build your own array" part in 17 above.) Answer is at the bottom if you get stuck.
 
 ALTERNATE DAYS: Instead of numbers, use strings. Example: `["dog", "cat", "person", "house", "tree"]`
 
@@ -107,5 +110,6 @@ Examples: <br>
 `a = ["ant", "bat", "cat"]`, `b = ["ant", "bat", "shark"]`, `a - b` #=> `["cat"]`. Here the `"shark"` is ignored 
 because it isn't in the `a` array.
 
-
 For 13. `a_b[0..1]`
+
+For 18. `[a_b[-1], a_b[]`
