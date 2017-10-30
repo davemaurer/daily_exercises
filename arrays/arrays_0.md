@@ -2,6 +2,9 @@
 
 - Arrays are data structures which are BUILT IN to Ruby, just like Hashes and Structs. They are also indexed 
   and ordered, as we will see below.
+  
+- Arrays are meant to store values, but one array is itself, one value. That's why you can 
+  do: `letters = ['a', 'b', 'c']` and expect letters to point to ONE value, the letters array.
 
 - Arrays hold multiple values. So, they are used when you have more than one value you want to 
   keep in the same place. If you have a group of 12 numbers(or strings, or symbols, or whatever),

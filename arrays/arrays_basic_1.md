@@ -17,7 +17,8 @@ Example: `5 + 5` #=> `10`
    local variable, `b` <br>
    Ex: ( `b = a.reverse` ) <br> 
    Now you have access to both normal and reversed arrays.
-   You could also use the `!` operator to mutate the value and destroy the original 
+   You could also use the `!` operator to mutate the array/value (your b array is ONE value, that holds multiple other values inside 
+   of it).
    value: `a.reverse!` #=> `[5, 4, 3, 2, 1]`. If you do this, reverse `a` back to #=> `[1, 2, 3, 4, 5]`
 
 5. Use `.times` and `!` to `.reverse!` the `b` array three times. (Hint: You can use `.times do` to 
