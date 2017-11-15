@@ -1,11 +1,13 @@
-## Passing arguments - OR - passing values (and argument that is passed to a method has to be an actual value)
+## Passing arguments - OR - passing values (an argument that is passed to a method has to be an actual value)
 
 ### Learning the lingo: 
 #### Argument vs. Value vs. Parameter:
  
 When talking about passing arguments to methods, using the word argument, parameter, or value all mean the 
 same thing. To reduce brain clutter, I'd stick to calling them arguments and keep in the back of your head that 
-arguments are just another way to say values. In short, an argument is a parameter is a value.
+arguments are just another way to say values. In short, an argument is a parameter is a value. (the word parameter will 
+have different meaning sometimes in other languages or to specific developers. There is no concrete rule to go by, which 
+happens a lot in programming. Get used to reading between the lines based on context and you will be fine.)
 
 #### Argument list:
 
@@ -126,6 +128,21 @@ t.say_something("hello") # call the say_something method on your instantiated Ta
 Above, because there is no `def` in front of say_something, we know we need to give an actual value, like the string of "hello".
 Further up, when we created our say_something method: `def say_something(phrase)`, we see a `def` in front of the method, so 
 we know the argument can't be an actual value, but instead we name it like a local variable: `phrase`.
+
+You could also see the `say_something` method called on a line by itself. When Ruby sees a set of lower case alpha-numeric 
+characters on a line by itself, it checks to see if there is a...1 - local variable with that name that has already been assigned 
+a value, or 2 - a method that has already been defined somewhere with that name. So you could see the `say_something` method called inside 
+of another method, like this:
+
+```ruby
+def say_something_and_also_say_hi(phrase)
+  puts "Hi!!!"
+  say_something(phrase)
+end
+```
+
+See? The above method will first use the `puts` method to output the string of `"Hi!!!"`, then will call the `say_something` method, 
+passing the `phrase` along like a relay race.
 
 ### Can I pass arguments in any order I want? Will Ruby jsut figure it out for me?
 
