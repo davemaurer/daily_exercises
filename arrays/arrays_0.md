@@ -12,7 +12,8 @@
   the same <em>box</em>. The <em>box</em> can be any data structure, and in the case of many single 
   values that don't really make sense as pairs, an Array works great.
 
-- Arrays can hold ANY legal Ruby value. So they can hold:
+- Arrays can hold ANY legal Ruby value. So they can hold essentially anything you can assign as a variable:
+
   * Raw values (literal values, basic values, whatever you want to call any of the 5 basic data types,
     which are: Strings, Integers, Booleans, Symbols, Nil). Example: `[1, nil, "a", :prince, true]`
   * Other arrays. Example: `mixed_values = [[1, 2, 3], ["Frog", "Bat", "Hat"], [6, 10, 4]]`
